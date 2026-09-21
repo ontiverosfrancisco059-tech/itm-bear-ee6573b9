@@ -1,125 +1,104 @@
-(function () {
-  'use strict';
+(() => {
+  "use strict";
 
-  var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
-  var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
+  const WA_NUMBER = "529811332914";
 
-  var body = document.body;
+  /* ---------- Mobile nav toggle ---------- */
+  const navToggle = document.getElementById("navToggle");
+  const mainNav = document.getElementById("mainNav");
 
-  var navToggle = $('#navToggle');
-  var header = $('#siteHeader');
+  if (navToggle && mainNav) {
+    const closeNav = () => {
+      mainNav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    };
 
-  function closeMenu() {
-    body.classList.remove('nav-open');
-    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
-  }
+    navToggle.addEventListener("click", () => {
+      const open = mainNav.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(open));
+    });
 
-  if (navToggle) {
-    navToggle.addEventListener('click', function () {
-      var open = body.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mainNav.querySelectorAll("a").forEach((link) =>
+      link.addEventListener("click", closeNav)
+    );
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeNav();
     });
   }
 
-  $$('.nav-link, .nav-cta').forEach(function (el) {
-    el.addEventListener('click', closeMenu);
-  });
+  /* ---------- Active section highlight ---------- */
+  const sections = Array.from(document.querySelectorAll("main section[id]"));
+  const navLinks = Array.from(document.querySelectorAll('.main-nav a[href^="#"]'));
 
-  function onScroll() {
-    if (window.scrollY > 10) header.classList.add('is-scrolled');
-    else header.classList.remove('is-scrolled');
-
-    var toTop = $('.to-top');
-    if (toTop) toTop.classList.toggle('is-visible', window.scrollY > 480);
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  var toTopBtn = $('.to-top');
-  if (toTopBtn) {
-    toTopBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      closeMenu();
-    });
-  }
-
-  var PAPEL_COLORS = ['#b3202c', '#e08f15', '#f4b41a', '#1e7f46', '#14818e', '#d6367b'];
-
-  $$('.js-papel').forEach(function (el) {
-    var count = Math.max(8, Math.ceil((el.offsetWidth || 900) / 42));
-    for (var i = 0; i < count; i++) {
-      var flag = document.createElement('div');
-      flag.className = 'flag';
-      flag.style.setProperty('--fc', PAPEL_COLORS[i % PAPEL_COLORS.length]);
-      flag.setAttribute('aria-hidden', 'true');
-      el.appendChild(flag);
-    }
-  });
-
-  var tabs = $$('.tab');
-  var panels = $$('.menu-panel');
-
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      tabs.forEach(function (t) {
-        var active = t === tab;
-        t.classList.toggle('is-active', active);
-        t.setAttribute('aria-selected', active ? 'true' : 'false');
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.getAttribute("id");
+        navLinks.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${id}`
+          );
+        });
       });
-      panels.forEach(function (panel) {
-        var active = panel.id === 'panel-' + tab.dataset.tab;
-        panel.classList.toggle('is-active', active);
-        panel.hidden = !active;
-      });
-    });
-  });
+    },
+    { rootMargin: "-45% 0px -50% 0px" }
+  );
 
-  var DAY_LABELS = ['dom', 'lun', 'mar', 'mie', 'jue', 'vie', 'sab'];
-  var today = new Date().getDay();
-  var todayLabel = '';
+  sections.forEach((section) => navObserver.observe(section));
 
-  $$('.schedule li').forEach(function (row) {
-    if (Number(row.getAttribute('data-day')) === today) {
-      row.classList.add('is-today');
-      todayLabel = row.querySelector('span').textContent;
-    }
-  });
+  /* ---------- Scroll reveal ---------- */
+  const revealEls = document.querySelectorAll(".reveal");
 
-  var statusEl = $('.about-card-status');
-  var noteEl = $('.js-today-note');
-
-  if (statusEl && todayLabel) {
-    var hour = new Date().getHours();
-    if (today === 0 && (hour < 9 || hour >= 15)) setClosed();
-    else if (today === 6 && (hour < 8 || hour >= 22)) setClosed();
-    else if (today >= 1 && today <= 5 && (hour < 7 || hour >= 21)) setClosed();
-    else statusEl.textContent = 'Abierto el d\u00eda de hoy';
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12 }
+    );
+    revealEls.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
-  function setClosed() {
-    statusEl.textContent = 'Cerrado por ahora';
-    statusEl.classList.add('is-closed');
-    if (noteEl) {
-      noteEl.textContent = 'Hoy (' + todayLabel + ') te esperamos: ven al local, no cerramos temprano si hay hambre.';
-      noteEl.classList.add('is-closed-note');
-    }
-  }
+  /* ---------- WhatsApp order buttons pre-fill the dish ---------- */
+  document.querySelectorAll(".dish-name").forEach((dishNameEl) => {
+    const dishName = dishNameEl.textContent.trim();
+    const priceEl =
+      dishNameEl.parentElement?.querySelector?.(".dish-price");
+    const price = priceEl ? ` ${priceEl.textContent.trim()}` : "";
+    const dish = `${dishName}${price}`;
 
-  var revealObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    const link = document.createElement("a");
+    link.className = "dish-order";
+    link.textContent = "Pedir";
+    link.href =
+      `https://wa.me/${WA_NUMBER}?text=` +
+      encodeURIComponent(
+        `¡Hola BEAR! 🍤 Quiero pedir: ${dish}`
+      );
+    link.target = "_blank";
+    link.rel = "noopener";
 
-  $$('.reveal').forEach(function (el) {
-    revealObserver.observe(el);
+    dishNameEl.parentElement.appendChild(link);
   });
 
-  var yearEl = $('.js-year');
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  /* ---------- Sticky header shadow on scroll ---------- */
+  const header = document.querySelector(".site-header");
+  if (header) {
+    const onScroll = () => {
+      header.style.boxShadow =
+        window.scrollY > 8
+          ? "0 6px 22px rgba(0,0,0,0.34)"
+          : "0 4px 18px rgba(0,0,0,0.28)";
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
 })();
