@@ -1,113 +1,87 @@
-/* BEAR · Ceviches y cervezas frías — interacciones del sitio */
 (function () {
   "use strict";
 
-  var WA_LINK = "https://wa.me/529811332914?text=" + encodeURIComponent("Hola BEAR, quiero hacer un pedido");
-
-  /* ---------- año del pie ---------- */
+  var header = document.getElementById("siteHeader");
+  var navToggle = document.getElementById("navToggle");
+  var nav = document.getElementById("siteNav");
   var year = document.getElementById("year");
-  if (year) year.textContent = String(new Date().getFullYear());
 
-  /* ---------- header pegajoso ---------- */
-  var header = document.getElementById("site-header");
-  function onScroll() {
-    if (window.scrollY > 10) header.classList.add("is-scrolled");
-    else header.classList.remove("is-scrolled");
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
-  /* ---------- menú móvil ---------- */
-  var nav = document.getElementById("nav");
-  var toggle = document.getElementById("nav-toggle");
-  var closeBtn = document.getElementById("nav-close");
-
-  function setMenu(open) {
-    nav.classList.toggle("is-open", open);
-    toggle.setAttribute("aria-expanded", String(open));
-    document.body.classList.toggle("nav-locked", open);
-  }
-  toggle.addEventListener("click", function () {
-    setMenu(!nav.classList.contains("is-open"));
-  });
-  closeBtn.addEventListener("click", function () { setMenu(false); });
-  nav.querySelectorAll("a:not(.nav__close)").forEach(function (a) {
-    a.addEventListener("click", function () { setMenu(false); });
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") setMenu(false);
-  });
-
-  /* ---------- revelados al hacer scroll ---------- */
-  var revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
-    revealEls.forEach(function (el) { io.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add("in"); });
+  function toggleNav(force) {
+    var open = typeof force === "boolean" ? force : !nav.classList.contains("open");
+    nav.classList.toggle("open", open);
+    if (navToggle) {
+      navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    }
   }
 
-  /* ---------- pestañas del menú ---------- */
-  var tabs = document.querySelectorAll(".tab");
-  var panels = document.querySelectorAll(".menu-panel");
-  tabs.forEach(function (tab) {
-    tab.addEventListener("click", function () {
-      tabs.forEach(function (t) {
-        var active = t === tab;
-        t.classList.toggle("is-active", active);
-        t.setAttribute("aria-selected", String(active));
-      });
-      panels.forEach(function (p) {
-        p.classList.toggle("is-active", p.dataset.panel === tab.dataset.tab);
+  if (navToggle) {
+    navToggle.addEventListener("click", function () {
+      toggleNav();
+    });
+  }
+
+  if (nav) {
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        toggleNav(false);
       });
     });
-  });
+  }
 
-  /* ---------- widget de comentarios ---------- */
-  var commentsRoot = document.getElementById("comments-root");
-  if (commentsRoot) {
-    var WIDGET_URL = "https://itm-void-excepcional.pages.dev/comments.js";
-    var PROJECT_ID = "ee6573b9-d5de-47e8-b614-796d31124119";
-    var PHONE_PUBLIC = false;
-    var PUBLIC_IDENTITY = "display_name_only";
-    var MODERATION_REQUIRED = true;
-    var REQUIRE_GOOGLE_LOGIN = true;
-
-    var script = document.createElement("script");
-    script.src = WIDGET_URL;
-    script.defer = true;
-    script.setAttribute("data-widget", "comments");
-    script.setAttribute("data-project-id", PROJECT_ID);
-    script.setAttribute("data-container", "comments-root");
-    script.setAttribute("data-phone-public", String(PHONE_PUBLIC));
-    script.setAttribute("data-public-identity", PUBLIC_IDENTITY);
-    script.setAttribute("data-moderation-required", String(MODERATION_REQUIRED));
-    script.setAttribute("data-require-google-login", String(REQUIRE_GOOGLE_LOGIN));
-
-    commentsRoot.setAttribute("data-project-id", PROJECT_ID);
-    commentsRoot.setAttribute("data-widget", "comments");
-
-    function markComments() {
-      if (commentsRoot.childElementCount > 0 && commentsRoot.dataset.ready !== "1") {
-        var loaders = commentsRoot.querySelectorAll(".comments__loading");
-        loaders.forEach(function (n) { n.remove(); });
-        commentsRoot.dataset.ready = "1";
-      }
+  function onScroll() {
+    if (header) {
+      header.classList.toggle("scrolled", window.scrollY > 20);
     }
-    var mo = new MutationObserver(markComments);
-    mo.observe(commentsRoot, { childList: true, subtree: true });
+    highlightActiveLink();
+  }
 
-    document.head.appendChild(script);
-    window.__BEAR_COMMENTS__ = { root: commentsRoot, markLoaded: markComments };
-    window.addEventListener("load", function () {
-      setTimeout(markComments, 900);
+  function highlightActiveLink() {
+    if (!nav) return;
+    var links = nav.querySelectorAll('a[href^="#"]');
+    var pos = window.scrollY + header.offsetHeight + 120;
+    var current = null;
+
+    links.forEach(function (link) {
+      var target = document.querySelector(link.getAttribute("href"));
+      if (!target) return;
+      if (target.offsetTop <= pos) {
+        current = link;
+      }
+    });
+
+    links.forEach(function (link) {
+      link.classList.toggle("active", link === current);
+    });
+  }
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  onScroll();
+
+  var revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    revealEls.forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    revealEls.forEach(function (el) {
+      el.classList.add("is-visible");
     });
   }
 })();
