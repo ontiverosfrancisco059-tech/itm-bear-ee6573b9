@@ -1,395 +1,481 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BEAR · La Campechana, sabor del mar. Seviches frescos y cervezas bien frías en Campeche. Haz tu pedido por WhatsApp.">
-  <meta name="theme-color" content="#c1272d">
-  <title>BEAR · Seviches y Cervezas Frías — Campeche</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEAR · Ceviches y cervezas frías — Campeche</title>
+  <meta name="description" content="BEAR en Campeche: la campechana, sabor del mar. Ceviches frescos y cervezas bien frías para acompañar. Haz tu pedido por WhatsApp." />
+  <meta name="theme-color" content="#0c4f58" />
+  <meta property="og:title" content="BEAR · Ceviches y cervezas frías — Campeche" />
+  <meta property="og:description" content="La campechana, sabor del mar. Ceviches frescos y cervezas bien frías para acompañar. Haz tu pedido por WhatsApp." />
+  <meta property="og:type" content="restaurant" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <a class="skip-link" href="#inicio" data-eb-editable="link" data-eb-key="index.a.1" data-eb-role="a" data-eb-kind="link">Saltar al contenido</a>
+  <a class="skip-link" href="#menu" data-eb-editable="link" data-eb-key="index.a.1" data-eb-role="a" data-eb-kind="link">Ir al menú</a>
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="BEAR — volver al inicio" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">
-        <span class="brand-sun" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="42" height="42" role="img">
-            <circle cx="24" cy="24" r="12" fill="#f4a300"/>
-            <g stroke="#f4a300" stroke-width="3.4" stroke-linecap="round">
-              <line x1="24" y1="2" x2="24" y2="9"/><line x1="24" y1="39" x2="24" y2="46"/>
-              <line x1="2" y1="24" x2="9" y2="24"/><line x1="39" y1="24" x2="46" y2="24"/>
-              <line x1="8.4" y1="8.4" x2="13.4" y2="13.4"/><line x1="34.6" y1="34.6" x2="39.6" y2="39.6"/>
-              <line x1="39.6" y1="8.4" x2="34.6" y2="13.4"/><line x1="13.4" y1="34.6" x2="8.4" y2="39.6"/>
-            </g>
-          </svg>
+  <!-- ======= BARRA TOPE ======= -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <span class="topbar__item">📍 Campeche, Camp.</span>
+      <span class="topbar__item topbar__wa">🗨️ <a href="https://wa.me/529811332914?text=Hola%20BEAR%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">Pedidos por WhatsApp</a></span>
+      <span class="topbar__item">🍻 Cervezas bien frías</span>
+    </div>
+  </div>
+
+  <!-- ======= NAVEGACIÓN ======= -->
+  <header class="site-header" id="site-header">
+    <div class="nav-wrap">
+      <a href="#inicio" class="brand" aria-label="BEAR, inicio" data-eb-editable="link" data-eb-key="index.a.3" data-eb-role="a" data-eb-kind="link">
+        <span class="brand__medallion" aria-hidden="true">
+          🐻
         </span>
-        <span class="brand-text">
+        <span class="brand__text">
           <strong>BEAR</strong>
-          <small>Seviches &amp; Cervezas frías</small>
+          <em>ceviches · cervezas frías</em>
         </span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú de navegación" data-eb-editable="link" data-eb-key="index.button.3" data-eb-role="button" data-eb-kind="link">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <nav class="nav" id="nav" aria-label="Navegación principal">
         <a href="#inicio" data-eb-editable="link" data-eb-key="index.a.4" data-eb-role="a" data-eb-kind="link">Inicio</a>
         <a href="#nosotros" data-eb-editable="link" data-eb-key="index.a.5" data-eb-role="a" data-eb-kind="link">Nosotros</a>
         <a href="#menu" data-eb-editable="link" data-eb-key="index.a.6" data-eb-role="a" data-eb-kind="link">Menú</a>
-        <a href="#horario" data-eb-editable="link" data-eb-key="index.a.7" data-eb-role="a" data-eb-kind="link">Horario</a>
+        <a href="#horarios" data-eb-editable="link" data-eb-key="index.a.7" data-eb-role="a" data-eb-kind="link">Horarios</a>
         <a href="#ubicacion" data-eb-editable="link" data-eb-key="index.a.8" data-eb-role="a" data-eb-kind="link">Ubicación</a>
-        <a href="#comentarios" data-eb-editable="link" data-eb-key="index.a.9" data-eb-role="a" data-eb-kind="link">Comentarios</a>
-        <a class="nav-cta" href="https://wa.me/529811332914?text=%C2%A1Hola%20BEAR!%20Quiero%20hacer%20mi%20pedido." target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.10" data-eb-role="a" data-eb-kind="link">Pedir por WhatsApp</a>
+        <a href="#visitanos" data-eb-editable="link" data-eb-key="index.a.9" data-eb-role="a" data-eb-kind="link">Visítanos</a>
+        <a href="#" id="nav-close" class="nav__close" aria-label="Cerrar menú" data-eb-editable="link" data-eb-key="index.a.10" data-eb-role="a" data-eb-kind="link">✕</a>
       </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn--accent btn--small" href="https://wa.me/529811332914?text=Hola%20BEAR%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.11" data-eb-role="a" data-eb-kind="link">
+          🗨️ Pedir
+        </a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav" data-eb-editable="link" data-eb-key="index.button.12" data-eb-role="button" data-eb-kind="link">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main id="inicio">
+  <main>
+    <!-- ======= HERO ======= -->
+    <section class="hero" id="inicio">
+      <div class="hero__deco hero__deco--waves" aria-hidden="true"></div>
 
-    <!-- ===================== HERO ===================== -->
-    <section class="hero">
-      <div class="hero-pattern" aria-hidden="true"></div>
-      <svg class="hero-waves" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,64 C240,110 480,10 720,52 C960,94 1200,20 1440,64 L1440,120 L0,120 Z" fill="var(--papel-bg)"></path>
-      </svg>
-      <div class="container hero-inner">
-        <p class="hero-overline" data-eb-editable="text" data-eb-key="index.p.11" data-eb-role="p" data-eb-kind="text">★ La Campechana · Sabor del mar ★</p>
-        <h1 class="hero-title" data-eb-editable="text" data-eb-key="index.h1.12" data-eb-role="h1" data-eb-kind="text">
-          <span class="hero-bear">BEAR</span>
-          <span class="hero-sub">Seviches frescos<br>&amp; chelas bien frías</span>
+      <div class="hero__inner">
+        <p class="hero__eyebrow reveal" data-eb-editable="text" data-eb-key="index.p.13" data-eb-role="p" data-eb-kind="text">☀️ La Campechana · sabor del mar</p>
+
+        <h1 class="hero__title reveal" data-eb-editable="text" data-eb-key="index.h1.14" data-eb-role="h1" data-eb-kind="text">
+          <span class="hero__title-line">BEAR</span>
         </h1>
-        <p class="hero-tagline" data-eb-editable="text" data-eb-key="index.p.13" data-eb-role="p" data-eb-kind="text">Cervezas heladas y seviches campechanos para acompañar. Ven, siéntate y déjate llevar por el sabor del mar.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/529811332914?text=%C2%A1Hola%20BEAR!%20Quiero%20hacer%20mi%20pedido." target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.14" data-eb-role="a" data-eb-kind="link">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.14-1.32A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.05.78.8-2.97-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.13c-.25-.12-1.46-.72-1.68-.8-.23-.09-.4-.13-.57.12-.16.24-.64.8-.78.96-.14.16-.28.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.43-.06-.12-.57-1.37-.78-1.88-.2-.5-.41-.43-.57-.44h-.48c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.16-.47-.28Z"/></svg>
-            Haz tu pedido en WhatsApp
+
+        <p class="hero__subtitle reveal" data-eb-editable="text" data-eb-key="index.p.15" data-eb-role="p" data-eb-kind="text">
+          Venta de <strong>cervezas bien frías</strong> y <strong>ceviches</strong> para acompañar.
+          Un bocado del mar de Campeche para que la visita valga la pena.
+        </p>
+
+        <div class="hero__ctas reveal">
+          <a class="btn btn--accent" href="https://wa.me/529811332914?text=Hola%20BEAR%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.16" data-eb-role="a" data-eb-kind="link">
+            🗨️ Haz tu pedido en WhatsApp
           </a>
-          <a class="btn btn-ghost" href="#menu" data-eb-editable="link" data-eb-key="index.a.15" data-eb-role="a" data-eb-kind="link">Ver el menú</a>
+          <a class="btn btn--ghost" href="#menu" data-eb-editable="link" data-eb-key="index.a.17" data-eb-role="a" data-eb-kind="link">Ver el menú ↓</a>
         </div>
-        <ul class="hero-chips" aria-label="Puntos clave">
-          <li>🍤 Ceviche desde $150</li>
-          <li>🍺 Chelas bien frías</li>
-          <li>📍 Campeche</li>
-          <li>🕖 Abierto de lunes a domingo</li>
+
+        <ul class="hero__chips reveal" aria-label="Datos rápidos">
+          <li>🦞 Ceviches frescos</li>
+          <li>🧊 Cervezas heladas</li>
+          <li>💲 de $150 a $350</li>
         </ul>
       </div>
+
+      <!-- ilustración de platillos -->
+      <div class="hero__art reveal" aria-hidden="true">
+        <svg viewBox="0 0 420 300" role="img" aria-label="Ilustración de ceviche y cerveza fría">
+          <!-- ola de fondo -->
+          <path d="M0 210 C60 185 120 235 180 210 C240 185 300 235 360 210 C390 198 408 205 420 200 L420 300 L0 300 Z" fill="#127885" opacity="0.35"/>
+          <path d="M0 235 C55 215 115 255 175 233 C235 212 300 258 420 225 L420 300 L0 300 Z" fill="#0b3640" opacity="0.5"/>
+
+          <!-- sol -->
+          <circle cx="78" cy="52" r="26" fill="#ffc23c"/>
+          <circle cx="78" cy="52" r="17" fill="#ffdd8a"/>
+          <g stroke="#f7b32b" stroke-width="4" stroke-linecap="round">
+            <line x1="78" y1="10" x2="78" y2="0"/>
+            <line x1="78" y1="94" x2="78" y2="104"/>
+            <line x1="36" y1="52" x2="26" y2="52"/>
+            <line x1="120" y1="52" x2="130" y2="52"/>
+            <line x1="48" y1="22" x2="41" y2="15"/>
+            <line x1="108" y1="82" x2="115" y2="89"/>
+            <line x1="108" y1="22" x2="115" y2="15"/>
+            <line x1="48" y1="82" x2="41" y2="89"/>
+          </g>
+
+          <!-- tazón de ceviche -->
+          <ellipse cx="200" cy="214" rx="118" ry="26" fill="#0b3640"/>
+          <path d="M88 176 L312 176 Q302 204 286 214 Q224 244 168 214 Q148 204 132 184 Z" fill="#2f5d68"/>
+          <path d="M88 176 L312 176 Q302 204 286 214 Q224 244 168 214 Q148 204 132 184 Z" fill="none" stroke="#ff6b4a" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M96 184 L304 184" stroke="#ff6b4a" stroke-width="3"/>
+          <ellipse cx="200" cy="150" rx="104" ry="34" fill="#ffdfa6"/>
+          <circle cx="160" cy="140" r="13" fill="#ff8f70"/>
+          <circle cx="236" cy="146" r="11" fill="#e8517d"/>
+          <path d="M150 152 q6 -10 12 0 q6 10 12 0" fill="#7bb661"/>
+          <path d="M232 162 q6 -12 13 0 q7 12 13 0" fill="#7bb661"/>
+          <circle cx="198" cy="138" r="7" fill="#f3f0e6"/>
+          <circle cx="176" cy="160" r="8" fill="#f3f0e6"/>
+          <circle cx="226" cy="161" r="8" fill="#f3f0e6"/>
+          <circle cx="206" cy="170" r="6" fill="#f3f0e6"/>
+          <g stroke="#ffb84d" stroke-width="5" stroke-linecap="round">
+            <line x1="198" y1="148" x2="190" y2="178"/>
+            <line x1="150" y1="152" x2="140" y2="182"/>
+            <line x1="250" y1="156" x2="262" y2="184"/>
+          </g>
+          <text x="200" y="120" text-anchor="middle" font-size="20">🍤</text>
+
+          <!-- limón -->
+          <circle cx="330" cy="70" r="20" fill="#ffc23c" stroke="#d99a2b" stroke-width="3"/>
+          <g stroke="#d99a2b" stroke-width="2">
+            <line x1="330" y1="54" x2="330" y2="86"/>
+            <line x1="314" y1="70" x2="346" y2="70"/>
+            <line x1="319" y1="59" x2="341" y2="81"/>
+            <line x1="341" y1="59" x2="319" y2="81"/>
+          </g>
+
+          <!-- botella de cerveza -->
+          <path d="M52 300 L52 252 L44 246 L44 224 L64 224 L64 246 L58 252 L58 300 Z" fill="#f3e6c8"/>
+          <path d="M44 224 L64 224 L66 216 L42 216 Z" fill="#e6d2a8"/>
+          <rect x="46" y="262" width="16" height="30" fill="#f7b32b"/>
+          <text x="54" y="278" text-anchor="middle" font-size="9" fill="#5c3408" font-weight="700">BEAR<br/>FRÍA</text>
+          <g stroke="#fff" stroke-width="1.5" opacity="0.7">
+            <line x1="48" y1="236" x2="48" y2="242"/>
+            <line x1="52" y1="236" x2="52" y2="242"/>
+            <line x1="56" y1="236" x2="56" y2="242"/>
+          </g>
+
+          <!-- frío: gotitas -->
+          <g fill="#bfe9ec">
+            <circle cx="42" cy="232" r="3"/>
+            <circle cx="38" cy="240" r="2.4"/>
+            <circle cx="66" cy="234" r="3"/>
+            <circle cx="70" cy="244" r="2.4"/>
+          </g>
+
+          <!-- estrella campechana -->
+          <g fill="#ff6b4a">
+            <path d="M372 120 l6 14 15 2 -11 11 3 15 -13 -8 -13 8 3 -15 -11 -11 15 -2 Z"/>
+            <path d="M372 120" fill="#e2574b"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero__deco hero__deco--bottom" aria-hidden="true"></div>
     </section>
 
-    <!-- ===================== NOSOTROS ===================== -->
-    <section class="section about" id="nosotros">
-      <div class="container">
-        <p class="kicker" data-eb-editable="text" data-eb-key="index.p.16" data-eb-role="p" data-eb-kind="text">Nuestra casa</p>
-        <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.17" data-eb-role="h2" data-eb-kind="text">Sabor del mar,<br>corazón campechano</h2>
-        <div class="about-grid">
-          <div class="about-card">
-            <span class="about-icon" aria-hidden="true">🦐</span>
-            <h3 data-eb-editable="text" data-eb-key="index.h3.18" data-eb-role="h3" data-eb-kind="text">Seviches frescos</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.19" data-eb-role="p" data-eb-kind="text">Preparamos ceviche al momento, con pescado y mariscos frescos del día y ese toque cítrico bien campechano que se siente desde el primer bocado.</p>
+    <!-- ======= FRANJA MARQUESINA ======= -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>CEVICHES FRESCOS</span><i>✳</i>
+        <span>CERVEZAS BIEN FRÍAS</span><i>✳</i>
+        <span>SABOR DE CAMPECHE</span><i>✳</i>
+        <span>HAZ TU PEDIDO POR WHATSAPP</span><i>✳</i>
+        <span>CEVICHES FRESCOS</span><i>✳</i>
+        <span>CERVEZAS BIEN FRÍAS</span><i>✳</i>
+        <span>SABOR DE CAMPECHE</span><i>✳</i>
+        <span>HAZ TU PEDIDO POR WHATSAPP</span><i>✳</i>
+      </div>
+    </div>
+
+    <!-- ======= NOSOTROS ======= -->
+    <section class="section nosotros" id="nosotros">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="section-head__kicker">— nosotras nos —</span>
+          <h2 class="section-head__title" data-eb-editable="text" data-eb-key="index.h2.18" data-eb-role="h2" data-eb-kind="text">El sabor de BEAR</h2>
+          <p class="section-head__sub" data-eb-editable="text" data-eb-key="index.p.19" data-eb-role="p" data-eb-kind="text">La Campechana · sabor del mar</p>
+        </header>
+
+        <div class="nosotros__grid">
+          <div class="nosotros__card reveal">
+            <span class="nosotros__icon" aria-hidden="true">🦐</span>
+            <h3 data-eb-editable="text" data-eb-key="index.h3.20" data-eb-role="h3" data-eb-kind="text">Ceviches de la casa</h3>
+            <p data-eb-editable="text" data-eb-key="index.p.21" data-eb-role="p" data-eb-kind="text">Camarón fresco, sabor a mar y un toque campechano que se siente desde la primera cucharada. Frío, cítrico y bien acompañado.</p>
           </div>
-          <div class="about-card">
-            <span class="about-icon" aria-hidden="true">🍺</span>
-            <h3 data-eb-editable="text" data-eb-key="index.h3.20" data-eb-role="h3" data-eb-kind="text">Cervezas bien frías</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.21" data-eb-role="p" data-eb-kind="text">Nada mejor que una chela a la temperatura perfecta para acompañar tu seviche. Frías, heladas y siempre listas para destapar.</p>
+          <div class="nosotros__card reveal">
+            <span class="nosotros__icon" aria-hidden="true">🍺</span>
+            <h3 data-eb-editable="text" data-eb-key="index.h3.22" data-eb-role="h3" data-eb-kind="text">Cervezas bien frías</h3>
+            <p data-eb-editable="text" data-eb-key="index.p.23" data-eb-role="p" data-eb-kind="text">La de siempre, pero helada como tiene que ser. Nada combina mejor con un ceviche que una cerveza a la temperatura perfecta.</p>
           </div>
-          <div class="about-card">
-            <span class="about-icon" aria-hidden="true">🌊</span>
-            <h3 data-eb-editable="text" data-eb-key="index.h3.22" data-eb-role="h3" data-eb-kind="text">Ambiente campechano</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.23" data-eb-role="p" data-eb-kind="text">Venta de cervezas bien frías y seviches para acompañar, en un lugar sencillo, alegre y como en casa, junto al sabor del mar.</p>
+          <div class="nosotros__card reveal">
+            <span class="nosotros__icon" aria-hidden="true">🌊</span>
+            <h3 data-eb-editable="text" data-eb-key="index.h3.24" data-eb-role="h3" data-eb-kind="text">Sabor de Campeche</h3>
+            <p data-eb-editable="text" data-eb-key="index.p.25" data-eb-role="p" data-eb-kind="text">Sobre el Golfo, con receta campechana. Aquí se viene a disfrutar sin prisas: te atiendes, pides y te quedas con antojo de volver.</p>
           </div>
         </div>
-        <div class="about-note">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.2l-4.8 2.7.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
-          <p data-eb-editable="text" data-eb-key="index.p.24" data-eb-role="p" data-eb-kind="text">Te esperamos en <strong>Campeche</strong>. Servimos de <strong>lunes a domingo</strong> — tan solo di “hola” y tu pedido está en camino.</p>
-        </div>
+
+        <p class="nosotros__nota reveal" data-eb-editable="text" data-eb-key="index.p.26" data-eb-role="p" data-eb-kind="text">
+          💬 <em>“Queremos que con solo ver la página — y lo que ves — se te antoje entrar al local y quedarte ahí hasta el último bocado.”</em>
+        </p>
       </div>
     </section>
 
-    <!-- ===================== MENU ===================== -->
+    <!-- ======= MENÚ ======= -->
     <section class="section menu" id="menu">
-      <svg class="section-wave section-wave-top" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,0 L1440,0 L1440,70 C1200,20 960,60 720,40 C480,20 240,50 0,20 Z" fill="#1d5c63"></path>
-      </svg>
-      <div class="container">
-        <p class="kicker kicker-light" data-eb-editable="text" data-eb-key="index.p.25" data-eb-role="p" data-eb-kind="text">Para chuparse los dedos</p>
-        <h2 class="section-title section-title-light" data-eb-editable="text" data-eb-key="index.h2.26" data-eb-role="h2" data-eb-kind="text">Nuestro menú</h2>
-        <p class="menu-intro" data-eb-editable="text" data-eb-key="index.p.27" data-eb-role="p" data-eb-kind="text">Toda la frescura del mar en un plato: seviches al momento y cervezas bien frías para que el maridaje sea perfecto. Precios de <strong>$150 a $350 pesos</strong>.</p>
+      <div class="wrapl">
+        <header class="section-head section-head--light reveal">
+          <span class="section-head__kicker">— pa’ chuparse los dedos —</span>
+          <h2 class="section-head__title" data-eb-editable="text" data-eb-key="index.h2.27" data-eb-role="h2" data-eb-kind="text">Nuestro menú</h2>
+          <p class="section-head__sub" data-eb-editable="text" data-eb-key="index.p.28" data-eb-role="p" data-eb-kind="text">Ceviches y cervezas frías · precios de $150 a $350</p>
+        </header>
 
-        <div class="menu-cards">
-          <article class="menu-card reveal">
-            <header class="menu-card-head">
-              <span class="menu-card-num">01</span>
-              <h3 data-eb-editable="text" data-eb-key="index.h3.28" data-eb-role="h3" data-eb-kind="text">Seviches Clásicos</h3>
-              <span class="menu-card-badge">🍤 Frescos del día</span>
-            </header>
-            <ul class="menu-list">
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Ceviche de pescado</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$150</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.29" data-eb-role="p" data-eb-kind="text">Pescado marinado al momento en limón, jitomate, cebolla morada, cilantro y un toque de chile.</p>
-              </li>
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Ceviche de camarón</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$180</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.30" data-eb-role="p" data-eb-kind="text">Camarón fresco en escabeche criollo con aguacate, limón y especias de la casa.</p>
-              </li>
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Ceviche mixto</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$220</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.31" data-eb-role="p" data-eb-kind="text">Pescado y camarón juntos, el clásico que nunca falla, bien cargado de sabor.</p>
-              </li>
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Aguachile de camarón</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$230</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.32" data-eb-role="p" data-eb-kind="text">Camarón bañado en aguachile verde con pepino y limón. Picor bien puesto.</p>
-              </li>
-            </ul>
-          </article>
-
-          <article class="menu-card reveal">
-            <header class="menu-card-head">
-              <span class="menu-card-num">02</span>
-              <h3 data-eb-editable="text" data-eb-key="index.h3.33" data-eb-role="h3" data-eb-kind="text">Especiales del Mar</h3>
-              <span class="menu-card-badge">⭐ Muy pedidos</span>
-            </header>
-            <ul class="menu-list">
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Coctel campechano</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$260</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.34" data-eb-role="p" data-eb-kind="text">Camarón, pulpo y caracol en jugo de mariscos con aguacate y tostadas.</p>
-              </li>
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Ceviche de caracol</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$290</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.35" data-eb-role="p" data-eb-kind="text">Caracol de mar fresco, firme y sabroso, marinado con limón y hierbas.</p>
-              </li>
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Ceviche de pulpo</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$320</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.36" data-eb-role="p" data-eb-kind="text">Pulpo tierno a la parrilla en marinado cítrico. La joya de la casa.</p>
-              </li>
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Tostada de ceviche</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$160</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.37" data-eb-role="p" data-eb-kind="text">Tostada crujiente cargada de ceviche del día con aguacate. Ideal para empezar.</p>
-              </li>
-            </ul>
-          </article>
-
-          <article class="menu-card reveal">
-            <header class="menu-card-head">
-              <span class="menu-card-num">03</span>
-              <h3 data-eb-editable="text" data-eb-key="index.h3.38" data-eb-role="h3" data-eb-kind="text">Chelas Bien Frías</h3>
-              <span class="menu-card-badge">🧊 A la temperatura perfecta</span>
-            </header>
-            <ul class="menu-list">
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Cerveza nacional</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$80</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.39" data-eb-role="p" data-eb-kind="text">Cerveza bien fría, de garras y siempre lista. Pídele chela, michelada o con krauser.</p>
-              </li>
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Michelada clásica</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$100</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.40" data-eb-role="p" data-eb-kind="text">Con jugo de limón, clave, salsa inglesa y chile en el borde. La acompañante perfecta de un seviche.</p>
-              </li>
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Chela con camarón</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$120</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.41" data-eb-role="p" data-eb-kind="text">Michelada con camarón seco y un toque de la casa. Va y viene.</p>
-              </li>
-              <li>
-                <div class="dish">
-                  <span class="dish-name">Cerveza artesanal</span>
-                  <span class="dish-dash" aria-hidden="true"></span>
-                  <span class="dish-price">$150</span>
-                </div>
-                <p class="dish-desc" data-eb-editable="text" data-eb-key="index.p.42" data-eb-role="p" data-eb-kind="text">Rotación semanal de chelas artesanales locales, frías y bien servidas.</p>
-              </li>
-            </ul>
-          </article>
+        <div class="tabs reveal" role="tablist" aria-label="Categorías del menú">
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="ceviches" data-eb-editable="link" data-eb-key="index.button.29" data-eb-role="button" data-eb-kind="link">🦞 Ceviches</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="cervezas" data-eb-editable="link" data-eb-key="index.button.30" data-eb-role="button" data-eb-kind="link">🍺 Cervezas frías</button>
         </div>
 
-        <div class="menu-note">
-          <p data-eb-editable="text" data-eb-key="index.p.43" data-eb-role="p" data-eb-kind="text">* Precios de referencia. Pregunta por los seviches del día y combos especiales al visitarnos o por WhatsApp.</p>
-          <a class="btn btn-primary" href="https://wa.me/529811332914?text=%C2%A1Hola%20BEAR!%20%F0%9F%8D%A4%20Quiero%20pedir%3A%20" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.44" data-eb-role="a" data-eb-kind="link">Pedir ahora</a>
-        </div>
-      </div>
-      <svg class="section-wave section-wave-bottom" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,70 L1440,70 L1440,0 C1200,50 960,10 720,30 C480,50 240,20 0,50 Z" fill="#fffaf1"></path>
-      </svg>
-    </section>
-
-    <!-- ===================== HORARIO ===================== -->
-    <section class="section schedule" id="horario">
-      <div class="container schedule-grid">
-        <div class="schedule-info reveal">
-          <p class="kicker" data-eb-editable="text" data-eb-key="index.p.45" data-eb-role="p" data-eb-kind="text">Ven a vernos</p>
-          <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.46" data-eb-role="h2" data-eb-kind="text">Horario</h2>
-          <ul class="schedule-list">
-            <li><span>Lunes a Viernes</span><strong>7:00 — 21:00</strong></li>
-            <li><span>Sábado</span><strong>8:00 — 22:00</strong></li>
-            <li><span>Domingo</span><strong>9:00 — 15:00</strong></li>
-          </ul>
-          <p class="schedule-hint" data-eb-editable="text" data-eb-key="index.p.47" data-eb-role="p" data-eb-kind="text">Abrimos temprano: el seviche del día y las chelas frías te esperan de lunes a domingo.</p>
-          <a class="btn btn-primary" href="tel:+529811332914" data-eb-editable="link" data-eb-key="index.a.48" data-eb-role="a" data-eb-kind="link">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1L6.6 10.8z"/></svg>
-            Llamar al 981 133 2914
-          </a>
-        </div>
-        <div class="schedule-sun reveal" aria-hidden="true">
-          <svg viewBox="0 0 200 200" width="100%" height="100%">
-            <defs>
-              <pattern id="sun-rays" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-                <g stroke="#f4a300" stroke-width="6" stroke-linecap="round">
-                  <line x1="100" y1="0" x2="100" y2="30"/><line x1="100" y1="170" x2="100" y2="200"/>
-                  <line x1="0" y1="100" x2="30" y2="100"/><line x1="170" y1="100" x2="200" y2="100"/>
-                  <line x1="29" y1="29" x2="50" y2="50"/><line x1="150" y1="150" x2="171" y2="171"/>
-                  <line x1="171" y1="29" x2="150" y2="50"/><line x1="50" y1="150" x2="29" y2="171"/>
-                </g>
-              </pattern>
-            </defs>
-            <circle cx="100" cy="100" r="100" fill="url(#sun-rays)"/>
-            <circle cx="100" cy="100" r="62" fill="#f4a300"/>
-            <circle cx="100" cy="100" r="48" fill="#c1272d"/>
-            <path d="M70 92 L100 70 L130 92 L130 128 L100 150 L70 128 Z" fill="#fffaf1"/>
-            <circle cx="70" cy="92" r="8" fill="#fffaf1"/>
-            <circle cx="100" cy="70" r="8" fill="#fffaf1"/>
-            <circle cx="130" cy="92" r="8" fill="#fffaf1"/>
-            <circle cx="130" cy="128" r="8" fill="#fffaf1"/>
-            <circle cx="100" cy="150" r="8" fill="#fffaf1"/>
-            <circle cx="70" cy="128" r="8" fill="#fffaf1"/>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== UBICACION ===================== -->
-    <section class="section location" id="ubicacion">
-      <div class="container">
-        <p class="kicker" data-eb-editable="text" data-eb-key="index.p.49" data-eb-role="p" data-eb-kind="text">Encuéntranos</p>
-        <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.50" data-eb-role="h2" data-eb-kind="text">Ubicación</h2>
-        <div class="location-grid">
-          <div class="location-card reveal">
-            <span class="loc-pin" aria-hidden="true">📍</span>
-            <h3 data-eb-editable="text" data-eb-key="index.h3.51" data-eb-role="h3" data-eb-kind="text">Campeche</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.52" data-eb-role="p" data-eb-kind="text">Nos encontramos en Campeche, donde el mar se siente hasta en la comida. Pide dirección exacta por WhatsApp y te esperamos.</p>
-            <a class="btn btn-outline" href="https://maps.google.com/?q=Monterrey" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.53" data-eb-role="a" data-eb-kind="link">Ver en el mapa</a>
-          </div>
-          <div class="location-card location-card-dark reveal">
-            <span class="loc-pin" aria-hidden="true">📞</span>
-            <h3 data-eb-editable="text" data-eb-key="index.h3.54" data-eb-role="h3" data-eb-kind="text">Contacto directo</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.55" data-eb-role="p" data-eb-kind="text">¿Tienes antojo? Háznoslo saber: llámanos, escríbenos y tu pedido estará listo. ¡También hacemos pedidos por WhatsApp!</p>
-            <div class="loc-links">
-              <a href="tel:+529811332914" data-eb-editable="link" data-eb-key="index.a.56" data-eb-role="a" data-eb-kind="link">📞 981 133 2914</a>
-              <a href="https://wa.me/529811332914?text=%C2%A1Hola%20BEAR!%20Quiero%20hacer%20mi%20pedido." target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.57" data-eb-role="a" data-eb-kind="link">💬 WhatsApp</a>
+        <div class="menu-panel is-active" id="panel-ceviches" data-panel="ceviches">
+          <article class="menu-item reveal">
+            <div class="menu-item__info">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.31" data-eb-role="h3" data-eb-kind="text">Ceviche campechano</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.32" data-eb-role="p" data-eb-kind="text">El clásico de la casa: camarón, sierra y pulpo marinados, con cebolla morada, jitomate, chile y mucho limón.</p>
             </div>
+            <span class="menu-item__price">$180</span>
+          </article>
+          <article class="menu-item reveal">
+            <div class="menu-item__info">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.33" data-eb-role="h3" data-eb-kind="text">Ceviche de camarón</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.34" data-eb-role="p" data-eb-kind="text">Camarón blanco fresco con pepino, aguacate y cilantro. Servido bien frío con tostadas y salsa de la casa.</p>
+            </div>
+            <span class="menu-item__price">$150</span>
+          </article>
+          <article class="menu-item reveal">
+            <div class="menu-item__info">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.35" data-eb-role="h3" data-eb-kind="text">Ceviche de pescado</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.36" data-eb-role="p" data-eb-kind="text">Sierra del golfo bañada en limón, con su punto justo de picor. Frescura que se siente en cada bocado.</p>
+            </div>
+            <span class="menu-item__price">$160</span>
+          </article>
+          <article class="menu-item reveal">
+            <div class="menu-item__info">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.37" data-eb-role="h3" data-eb-kind="text">Cocktail de camarón</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.38" data-eb-role="p" data-eb-kind="text">Campechano de mariscos en su jugo, aguacate, cebolla y un toque de salsa del chef. Servido con galletas saladas.</p>
+            </div>
+            <span class="menu-item__price">$250</span>
+          </article>
+          <article class="menu-item reveal">
+            <div class="menu-item__info">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.39" data-eb-role="h3" data-eb-kind="text">Tostada de ceviche</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.40" data-eb-role="p" data-eb-kind="text">Ni una: varias. Tostadas doradas con ceviche fresco encima, para compartir mientras llegan las cervezas.</p>
+            </div>
+            <span class="menu-item__price">$60</span>
+          </article>
+          <article class="menu-item reveal">
+            <div class="menu-item__info">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.41" data-eb-role="h3" data-eb-kind="text">Botana especial del día</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.42" data-eb-role="p" data-eb-kind="text">Pregunta por la botana del día: mariscos frescos al mejor precio. Todos los días una propuesta distinta.</p>
+            </div>
+            <span class="menu-item__price">$—</span>
+          </article>
+        </div>
+
+        <div class="menu-panel" id="panel-cervezas" data-panel="cervezas">
+          <article class="menu-item reveal">
+            <div class="menu-item__info">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.43" data-eb-role="h3" data-eb-kind="text">Cerveza helada nacional</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.44" data-eb-role="p" data-eb-kind="text">La de siempre a la temperatura perfecta: bien fría, para acompañar el ceviche como manda la tradición.</p>
+            </div>
+            <span class="menu-item__price">$45</span>
+          </article>
+          <article class="menu-item reveal">
+            <div class="menu-item__info">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.45" data-eb-role="h3" data-eb-kind="text">Pack de 6 bien frías</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.46" data-eb-role="p" data-eb-kind="text">Media docena helada para compartir en mesa. Ideal para la botana, la plática y el golfo.</p>
+            </div>
+            <span class="menu-item__price">$260</span>
+          </article>
+          <article class="menu-item reveal">
+            <div class="menu-item__info">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.47" data-eb-role="h3" data-eb-kind="text">Cerveza de barril (tarro)</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.48" data-eb-role="p" data-eb-kind="text">Tarro bien servido, espuma de la buena. Pregunta por la de la casa.</p>
+            </div>
+            <span class="menu-item__price">$60</span>
+          </article>
+          <article class="menu-item reveal">
+            <div class="menu-item__info">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.49" data-eb-role="h3" data-eb-kind="text">Chela preparada</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.50" data-eb-role="p" data-eb-kind="text">La chela con su toque: clamato y picante. Perfecta pa’ no soltar el vaso.</p>
+            </div>
+            <span class="menu-item__price">$70</span>
+          </article>
+        </div>
+
+        <div class="menu__nota reveal">
+          <p data-eb-editable="text" data-eb-key="index.p.51" data-eb-role="p" data-eb-kind="text">📦 <strong>Cervezas bien frías</strong> para acompañar y <strong>ceviches frescos</strong> pa’ comer de verdad.</p>
+          <a class="btn btn--accent" href="https://wa.me/529811332914?text=Hola%20BEAR%2C%20quiero%20un%20pedido%20de%20ceviches%20y%20cervezas%20fr%C3%ADas" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.52" data-eb-role="a" data-eb-kind="link">🗨️ Haz tu pedido en WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FRANJA CITA ======= -->
+    <section class="frase" id="visitanos">
+      <div class="frase__inner reveal">
+        <p class="frase__big" data-eb-editable="text" data-eb-key="index.p.53" data-eb-role="p" data-eb-kind="text">“Pides, te sientas, y te quedas…”</p>
+        <p class="frase__small" data-eb-editable="text" data-eb-key="index.p.54" data-eb-role="p" data-eb-kind="text">Eso es BEAR. Super cute, lleno de sabor y bien frío.</p>
+      </div>
+    </section>
+
+    <!-- ======= HORARIOS E INFO ======= -->
+    <section class="section horarios" id="horarios">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="section-head__kicker">— te esperamos —</span>
+          <h2 class="section-head__title" data-eb-editable="text" data-eb-key="index.h2.55" data-eb-role="h2" data-eb-kind="text">Pásate cuando quieras</h2>
+          <p class="section-head__sub" data-eb-editable="text" data-eb-key="index.p.56" data-eb-role="p" data-eb-kind="text">Horarios y datos que te van a servir</p>
+        </header>
+
+        <div class="horarios__grid">
+          <div class="horarios__card reveal">
+            <span class="horarios__icon" aria-hidden="true">🕖</span>
+            <h3 data-eb-editable="text" data-eb-key="index.h3.57" data-eb-role="h3" data-eb-kind="text">Horario</h3>
+            <ul class="horarios__list">
+              <li><strong>Lun – Vie</strong> 7:00 – 21:00</li>
+              <li><strong>Sáb</strong> 8:00 – 22:00</li>
+              <li><strong>Dom</strong> 9:00 – 15:00</li>
+            </ul>
+          </div>
+          <div class="horarios__card reveal">
+            <span class="horarios__icon" aria-hidden="true">📍</span>
+            <h3 data-eb-editable="text" data-eb-key="index.h3.58" data-eb-role="h3" data-eb-kind="text">¿Dónde?</h3>
+            <p data-eb-editable="text" data-eb-key="index.p.59" data-eb-role="p" data-eb-kind="text">En Campeche, listos para recibirte. Ubícanos en el mapa y llega con antojo.</p>
+            <a class="btn btn--ghost btn--small" href="https://maps.google.com/?q=Monterrey" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.60" data-eb-role="a" data-eb-kind="link">Ver en Google Maps →</a>
+          </div>
+          <div class="horarios__card reveal">
+            <span class="horarios__icon" aria-hidden="true">📞</span>
+            <h3 data-eb-editable="text" data-eb-key="index.h3.61" data-eb-role="h3" data-eb-kind="text">Contacto</h3>
+            <p data-eb-editable="text" data-eb-key="index.p.62" data-eb-role="p" data-eb-kind="text">
+              <a class="tel" href="tel:+529811332914" data-eb-editable="link" data-eb-key="index.a.63" data-eb-role="a" data-eb-kind="link">981 133 29 14</a>
+            </p>
+            <ul class="horarios__tags">
+              <li>⛔ No hacemos envíos a domicilio</li>
+              <li>🪑 Atención sin reservación: llega y disfruta</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== COMENTARIOS ===================== -->
-    <section class="section comments" id="comentarios">
-      <svg class="section-wave section-wave-top" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,0 L1440,0 L1440,70 C1200,20 960,60 720,40 C480,20 240,50 0,20 Z" fill="#c1272d"></path>
-      </svg>
-      <div class="container comments-wrap">
-        <p class="kicker kicker-light" data-eb-editable="text" data-eb-key="index.p.58" data-eb-role="p" data-eb-kind="text">Tu opinión cuenta</p>
-        <h2 class="section-title section-title-light" data-eb-editable="text" data-eb-key="index.h2.59" data-eb-role="h2" data-eb-kind="text">Déjanos tu comentario</h2>
-        <p class="comments-intro" data-eb-editable="text" data-eb-key="index.p.60" data-eb-role="p" data-eb-kind="text">¿Ya probaste nuestros seviches y chelas bien frías? Cuéntanos tu experiencia e invita a más gente a conocer el sabor del mar a la campechana.</p>
-        <div data-itm-profile data-project-id="ee6573b9-d5de-47e8-b614-796d31124119"></div>
-        <div data-itm-comments data-project-id="ee6573b9-d5de-47e8-b614-796d31124119"></div>
+    <!-- ======= UBICACIÓN ======= -->
+    <section class="section ubicacion" id="ubicacion">
+      <div class="wrap">
+        <header class="section-head section-head--light reveal">
+          <span class="section-head__kicker">— cómo llegar —</span>
+          <h2 class="section-head__title" data-eb-editable="text" data-eb-key="index.h2.64" data-eb-role="h2" data-eb-kind="text">Ubicación</h2>
+          <p class="section-head__sub" data-eb-editable="text" data-eb-key="index.p.65" data-eb-role="p" data-eb-kind="text">Un lugar campechano, sabor del mar</p>
+        </header>
+
+        <div class="ubicacion__card reveal">
+          <div class="ubicacion__map" aria-hidden="true">
+            <svg viewBox="0 0 520 220" role="img" aria-label="Mapa estilizado de Campeche">
+              <rect width="520" height="220" fill="#e8f0e6"/>
+              <path d="M0 170 Q130 130 260 168 T520 150 L520 220 L0 220 Z" fill="#bfe3dd"/>
+              <path d="M0 185 Q150 150 300 182 T520 168 L520 220 L0 220 Z" fill="#0c4f58" opacity="0.85"/>
+              <g stroke="#fff" opacity="0.25" stroke-width="2" fill="none">
+                <path d="M0 196 Q180 170 340 192 T520 184"/>
+                <path d="M0 206 Q120 192 240 206 T520 200"/>
+              </g>
+              <g fill="#ff9e7d">
+                <circle cx="140" cy="120" r="5"/><circle cx="300" cy="95" r="5"/><circle cx="430" cy="130" r="5"/>
+              </g>
+              <g stroke="#ffb84d" stroke-width="3" stroke-linecap="round">
+                <path d="M60 200 C120 190 160 205 210 195"/>
+                <path d="M380 198 C420 190 460 200 500 192"/>
+              </g>
+              <g transform="translate(250,105)">
+                <circle r="16" fill="#ff6b4a"/>
+                <circle r="10" fill="#ffc23c"/>
+                <path d="M0 -4 L0 4 M-4 0 L4 0" stroke="#5c3408" stroke-width="2"/>
+              </g>
+              <text x="250" y="160" text-anchor="middle" font-size="20" fill="#0b3640" font-weight="700">☀️ Campeche, Camp.</text>
+            </svg>
+          </div>
+          <div class="ubicacion__body">
+            <h3 data-eb-editable="text" data-eb-key="index.h3.66" data-eb-role="h3" data-eb-kind="text">Te esperamos en el local</h3>
+            <p data-eb-editable="text" data-eb-key="index.p.67" data-eb-role="p" data-eb-kind="text">Todo listo pa’ recibirte: las chelas bien frías, el ceviche fresco y el sabor de Campeche.</p>
+            <a class="btn btn--accent btn--small" href="https://maps.google.com/?q=Monterrey" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.68" data-eb-role="a" data-eb-kind="link">🗺️ Abrir en Google Maps</a>
+          </div>
+        </div>
       </div>
-      <svg class="section-wave section-wave-bottom" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,70 L1440,70 L1440,0 C1200,50 960,10 720,30 C480,50 240,20 0,50 Z" fill="#f7e8c9"></path>
-      </svg>
     </section>
 
-    <!-- ===================== CTA FINAL ===================== -->
-    <section class="section final-cta">
-      <div class="container final-inner">
-        <h2 data-eb-editable="text" data-eb-key="index.h2.61" data-eb-role="h2" data-eb-kind="text">¿Se te antojó un seviche?</h2>
-        <p data-eb-editable="text" data-eb-key="index.p.62" data-eb-role="p" data-eb-kind="text">Manda tu pedido por WhatsApp y lo dejamos listo. El sabor del mar te espera en BEAR.</p>
-        <a class="btn btn-primary btn-lg" href="https://wa.me/529811332914?text=%C2%A1Hola%20BEAR!%20%F0%9F%8D%9B%20Quiero%20hacer%20mi%20pedido." target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.63" data-eb-role="a" data-eb-kind="link">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.14-1.32A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.05.78.8-2.97-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.13c-.25-.12-1.46-.72-1.68-.8-.23-.09-.4-.13-.57.12-.16.24-.64.8-.78.96-.14.16-.28.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.43-.06-.12-.57-1.37-.78-1.88-.2-.5-.41-.43-.57-.44h-.48c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.16-.47-.28Z"/></svg>
-          Haz tu pedido en WhatsApp
-        </a>
+    <!-- ======= COMENTARIOS ======= -->
+    <section class="section comentarios" id="comentarios">
+      <div class="wrapl">
+        <header class="section-head reveal">
+          <span class="section-head__kicker">— ¿ya viniste? —</span>
+          <h2 class="section-head__title" data-eb-editable="text" data-eb-key="index.h2.69" data-eb-role="h2" data-eb-kind="text">Comentarios</h2>
+          <p class="section-head__sub" data-eb-editable="text" data-eb-key="index.p.70" data-eb-role="p" data-eb-kind="text">Cuéntanos qué te pareció el ceviche</p>
+        </header>
+
+        <div class="comments reveal">
+          <div class="comments__frame" id="comments-root" data-project-id="ee6573b9-d5de-47e8-b614-796d31124119">
+            <p class="comments__loading" data-eb-editable="text" data-eb-key="index.p.71" data-eb-role="p" data-eb-kind="text">Cargando comentarios…</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- ===================== FOOTER ===================== -->
+  <!-- ======= PIE ======= -->
   <footer class="site-footer">
-    <div class="papel-ribbon" aria-hidden="true"></div>
-    <div class="container footer-inner">
-      <a class="brand brand-footer" href="#top" data-eb-editable="link" data-eb-key="index.a.64" data-eb-role="a" data-eb-kind="link">
-        <span class="brand-sun" aria-hidden="true">☀️</span>
-        <span class="brand-text"><strong>BEAR</strong><small>Seviches &amp; Cervezas frías</small></span>
-      </a>
-      <p class="footer-tagline" data-eb-editable="text" data-eb-key="index.p.65" data-eb-role="p" data-eb-kind="text">La Campechana · Sabor del mar. Cervezas bien frías y seviches para acompañar.</p>
-      <ul class="footer-links">
-        <li><a href="#inicio" data-eb-editable="link" data-eb-key="index.a.66" data-eb-role="a" data-eb-kind="link">Inicio</a></li>
-        <li><a href="#nosotros" data-eb-editable="link" data-eb-key="index.a.67" data-eb-role="a" data-eb-kind="link">Nosotros</a></li>
-        <li><a href="#menu" data-eb-editable="link" data-eb-key="index.a.68" data-eb-role="a" data-eb-kind="link">Menú</a></li>
-        <li><a href="#horario" data-eb-editable="link" data-eb-key="index.a.69" data-eb-role="a" data-eb-kind="link">Horario</a></li>
-        <li><a href="#ubicacion" data-eb-editable="link" data-eb-key="index.a.70" data-eb-role="a" data-eb-kind="link">Ubicación</a></li>
-        <li><a href="#comentarios" data-eb-editable="link" data-eb-key="index.a.71" data-eb-role="a" data-eb-kind="link">Comentarios</a></li>
-      </ul>
-      <div class="footer-meta">
-        <span>📍 Campeche</span>
-        <span>📞 <a href="tel:+529811332914" data-eb-editable="link" data-eb-key="index.a.72" data-eb-role="a" data-eb-kind="link">981 133 2914</a></span>
-        <span>🕖 Lun–Vie 7:00–21:00 · Sáb 8:00–22:00 · Dom 9:00–15:00</span>
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="#inicio" class="brand brand--footer" data-eb-editable="link" data-eb-key="index.a.72" data-eb-role="a" data-eb-kind="link">
+            <span class="brand__medallion" aria-hidden="true">🐻</span>
+            <span class="brand__text"><strong>BEAR</strong><em>ceviches · cervezas frías</em></span>
+          </a>
+          <p data-eb-editable="text" data-eb-key="index.p.73" data-eb-role="p" data-eb-kind="text">La campechana, sabor del mar. Ceviches frescos y cervezas bien frías para acompañar. ✳</p>
+        </div>
+        <div class="footer__col">
+          <h4 data-eb-editable="text" data-eb-key="index.h4.74" data-eb-role="h4" data-eb-kind="text">Explora</h4>
+          <a href="#inicio" data-eb-editable="link" data-eb-key="index.a.75" data-eb-role="a" data-eb-kind="link">Inicio</a>
+          <a href="#nosotros" data-eb-editable="link" data-eb-key="index.a.76" data-eb-role="a" data-eb-kind="link">Nosotros</a>
+          <a href="#menu" data-eb-editable="link" data-eb-key="index.a.77" data-eb-role="a" data-eb-kind="link">Menú</a>
+          <a href="#horarios" data-eb-editable="link" data-eb-key="index.a.78" data-eb-role="a" data-eb-kind="link">Horarios</a>
+          <a href="#ubicacion" data-eb-editable="link" data-eb-key="index.a.79" data-eb-role="a" data-eb-kind="link">Ubicación</a>
+          <a href="#comentarios" data-eb-editable="link" data-eb-key="index.a.80" data-eb-role="a" data-eb-kind="link">Comentarios</a>
+        </div>
+        <div class="footer__col">
+          <h4 data-eb-editable="text" data-eb-key="index.h4.81" data-eb-role="h4" data-eb-kind="text">Contacto</h4>
+          <a href="tel:+529811332914" data-eb-editable="link" data-eb-key="index.a.82" data-eb-role="a" data-eb-kind="link">📞 981 133 29 14</a>
+          <a href="https://wa.me/529811332914?text=Hola%20BEAR%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.83" data-eb-role="a" data-eb-kind="link">🗨️ WhatsApp</a>
+          <a href="https://maps.google.com/?q=Monterrey" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.84" data-eb-role="a" data-eb-kind="link">📍 Campeche, Camp.</a>
+          <span class="footer__horario">🕖 Lun–Vie 7–21 · Sáb 8–22 · Dom 9–15</span>
+        </div>
       </div>
-      <p class="footer-copy" data-eb-editable="text" data-eb-key="index.p.73" data-eb-role="p" data-eb-kind="text">© 2026 BEAR · Seviches y Cervezas Frías. Hecho con el sabor del mar.</p>
+      <div class="footer__bar">
+        <p data-eb-editable="text" data-eb-key="index.p.85" data-eb-role="p" data-eb-kind="text">© <span id="year">2026</span> BEAR · Campeche · Hecho con ✳ sabor del mar.</p>
+      </div>
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/529811332914?text=%C2%A1Hola%20BEAR!%20Quiero%20hacer%20mi%20pedido." target="_blank" rel="noopener" aria-label="Pedir por WhatsApp" data-eb-editable="link" data-eb-key="index.a.74" data-eb-role="a" data-eb-kind="link">
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.14-1.32A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.05.78.8-2.97-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.13c-.25-.12-1.46-.72-1.68-.8-.23-.09-.4-.13-.57.12-.16.24-.64.8-.78.96-.14.16-.28.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.43-.06-.12-.57-1.37-.78-1.88-.2-.5-.41-.43-.57-.44h-.48c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.16-.47-.28Z"/></svg>
+  <!-- botón flotante de WhatsApp -->
+  <a class="fab" href="https://wa.me/529811332914?text=Hola%20BEAR%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Haz tu pedido por WhatsApp" data-eb-editable="link" data-eb-key="index.a.86" data-eb-role="a" data-eb-kind="link">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.6c1.2.5 2.5.8 3.8.8 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.3 0-2.6-.3-3.7-.8l-.3-.2-4.9 1 1-4.8-.2-.3c-.8-1.4-1.2-3-1.2-4.7 0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8zm4.3-7.6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-.9-.3-1.8-1.1-.7-.6-1.1-1.4-1.2-1.6-.1-.2 0-.3.1-.4l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 1.9 2.9 4.6 4.1.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.4z"/></svg>
+    <span>Pedir</span>
   </a>
 
-  <script src="script.js" defer></script>
-  <script src="https://itm-void-excepcional.pages.dev/comments.js" defer></script>
+  <script src="script.js"></script>
+
+<section id="perfil-usuario" aria-label="Perfil del visitante">
+  <div data-itm-profile data-project-id="ee6573b9-d5de-47e8-b614-796d31124119"></div>
+</section>
+
+<section id="comentarios" aria-label="Comentarios">
+  <div data-itm-comments data-project-id="ee6573b9-d5de-47e8-b614-796d31124119"></div>
+</section>
+
+<script src="https://itm-void-excepcional.pages.dev/comments.js" defer></script>
 </body>
 </html>
