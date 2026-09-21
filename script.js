@@ -1,104 +1,113 @@
-(() => {
+/* BEAR · Ceviches y cervezas frías — interacciones del sitio */
+(function () {
   "use strict";
 
-  const WA_NUMBER = "529811332914";
+  var WA_LINK = "https://wa.me/529811332914?text=" + encodeURIComponent("Hola BEAR, quiero hacer un pedido");
 
-  /* ---------- Mobile nav toggle ---------- */
-  const navToggle = document.getElementById("navToggle");
-  const mainNav = document.getElementById("mainNav");
+  /* ---------- año del pie ---------- */
+  var year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
 
-  if (navToggle && mainNav) {
-    const closeNav = () => {
-      mainNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    };
-
-    navToggle.addEventListener("click", () => {
-      const open = mainNav.classList.toggle("open");
-      navToggle.setAttribute("aria-expanded", String(open));
-    });
-
-    mainNav.querySelectorAll("a").forEach((link) =>
-      link.addEventListener("click", closeNav)
-    );
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeNav();
-    });
+  /* ---------- header pegajoso ---------- */
+  var header = document.getElementById("site-header");
+  function onScroll() {
+    if (window.scrollY > 10) header.classList.add("is-scrolled");
+    else header.classList.remove("is-scrolled");
   }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 
-  /* ---------- Active section highlight ---------- */
-  const sections = Array.from(document.querySelectorAll("main section[id]"));
-  const navLinks = Array.from(document.querySelectorAll('.main-nav a[href^="#"]'));
+  /* ---------- menú móvil ---------- */
+  var nav = document.getElementById("nav");
+  var toggle = document.getElementById("nav-toggle");
+  var closeBtn = document.getElementById("nav-close");
 
-  const navObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const id = entry.target.getAttribute("id");
-        navLinks.forEach((link) => {
-          link.classList.toggle(
-            "active",
-            link.getAttribute("href") === `#${id}`
-          );
-        });
-      });
-    },
-    { rootMargin: "-45% 0px -50% 0px" }
-  );
-
-  sections.forEach((section) => navObserver.observe(section));
-
-  /* ---------- Scroll reveal ---------- */
-  const revealEls = document.querySelectorAll(".reveal");
-
-  if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.12 }
-    );
-    revealEls.forEach((el) => revealObserver.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add("is-visible"));
+  function setMenu(open) {
+    nav.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    document.body.classList.toggle("nav-locked", open);
   }
-
-  /* ---------- WhatsApp order buttons pre-fill the dish ---------- */
-  document.querySelectorAll(".dish-name").forEach((dishNameEl) => {
-    const dishName = dishNameEl.textContent.trim();
-    const priceEl =
-      dishNameEl.parentElement?.querySelector?.(".dish-price");
-    const price = priceEl ? ` ${priceEl.textContent.trim()}` : "";
-    const dish = `${dishName}${price}`;
-
-    const link = document.createElement("a");
-    link.className = "dish-order";
-    link.textContent = "Pedir";
-    link.href =
-      `https://wa.me/${WA_NUMBER}?text=` +
-      encodeURIComponent(
-        `¡Hola BEAR! 🍤 Quiero pedir: ${dish}`
-      );
-    link.target = "_blank";
-    link.rel = "noopener";
-
-    dishNameEl.parentElement.appendChild(link);
+  toggle.addEventListener("click", function () {
+    setMenu(!nav.classList.contains("is-open"));
+  });
+  closeBtn.addEventListener("click", function () { setMenu(false); });
+  nav.querySelectorAll("a:not(.nav__close)").forEach(function (a) {
+    a.addEventListener("click", function () { setMenu(false); });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") setMenu(false);
   });
 
-  /* ---------- Sticky header shadow on scroll ---------- */
-  const header = document.querySelector(".site-header");
-  if (header) {
-    const onScroll = () => {
-      header.style.boxShadow =
-        window.scrollY > 8
-          ? "0 6px 22px rgba(0,0,0,0.34)"
-          : "0 4px 18px rgba(0,0,0,0.28)";
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
+  /* ---------- revelados al hacer scroll ---------- */
+  var revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  /* ---------- pestañas del menú ---------- */
+  var tabs = document.querySelectorAll(".tab");
+  var panels = document.querySelectorAll(".menu-panel");
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      tabs.forEach(function (t) {
+        var active = t === tab;
+        t.classList.toggle("is-active", active);
+        t.setAttribute("aria-selected", String(active));
+      });
+      panels.forEach(function (p) {
+        p.classList.toggle("is-active", p.dataset.panel === tab.dataset.tab);
+      });
+    });
+  });
+
+  /* ---------- widget de comentarios ---------- */
+  var commentsRoot = document.getElementById("comments-root");
+  if (commentsRoot) {
+    var WIDGET_URL = "https://itm-void-excepcional.pages.dev/comments.js";
+    var PROJECT_ID = "ee6573b9-d5de-47e8-b614-796d31124119";
+    var PHONE_PUBLIC = false;
+    var PUBLIC_IDENTITY = "display_name_only";
+    var MODERATION_REQUIRED = true;
+    var REQUIRE_GOOGLE_LOGIN = true;
+
+    var script = document.createElement("script");
+    script.src = WIDGET_URL;
+    script.defer = true;
+    script.setAttribute("data-widget", "comments");
+    script.setAttribute("data-project-id", PROJECT_ID);
+    script.setAttribute("data-container", "comments-root");
+    script.setAttribute("data-phone-public", String(PHONE_PUBLIC));
+    script.setAttribute("data-public-identity", PUBLIC_IDENTITY);
+    script.setAttribute("data-moderation-required", String(MODERATION_REQUIRED));
+    script.setAttribute("data-require-google-login", String(REQUIRE_GOOGLE_LOGIN));
+
+    commentsRoot.setAttribute("data-project-id", PROJECT_ID);
+    commentsRoot.setAttribute("data-widget", "comments");
+
+    function markComments() {
+      if (commentsRoot.childElementCount > 0 && commentsRoot.dataset.ready !== "1") {
+        var loaders = commentsRoot.querySelectorAll(".comments__loading");
+        loaders.forEach(function (n) { n.remove(); });
+        commentsRoot.dataset.ready = "1";
+      }
+    }
+    var mo = new MutationObserver(markComments);
+    mo.observe(commentsRoot, { childList: true, subtree: true });
+
+    document.head.appendChild(script);
+    window.__BEAR_COMMENTS__ = { root: commentsRoot, markLoaded: markComments };
+    window.addEventListener("load", function () {
+      setTimeout(markComments, 900);
+    });
   }
 })();
