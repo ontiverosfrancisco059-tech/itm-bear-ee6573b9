@@ -1,0 +1,160 @@
+{
+  "media_requests": [
+    {
+      "slot_id": "hero_home_fondo",
+      "page": "home",
+      "section": "hero",
+      "category": "custom",
+      "label": "Fondo hero ceviche y mar",
+      "theme": "mexicano natural",
+      "query": "mexican seafood ceviche platter rustic wooden table",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "acerca_ambiente",
+      "page": "home",
+      "section": "acerca",
+      "category": "custom",
+      "label": "Ambiente sabor del mar",
+      "theme": "mexicano natural",
+      "query": "seafood restaurant fresh fish display campeche coast",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "menu_ceviche_campechano",
+      "page": "menu",
+      "section": "ceviches",
+      "category": "dish",
+      "label": "Ceviche campechano",
+      "theme": "mexicano natural",
+      "query": "mixed seafood ceviche campeche style lime cilantro",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "menu_ceviche_camaron",
+      "page": "menu",
+      "section": "ceviches",
+      "category": "dish",
+      "label": "Ceviche de camarón",
+      "theme": "mexicano natural",
+      "query": "shrimp ceviche cocktail lime avocado",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "menu_ceviche_pescado",
+      "page": "menu",
+      "section": "ceviches",
+      "category": "dish",
+      "label": "Ceviche de pescado",
+      "theme": "mexicano natural",
+      "query": "fresh fish ceviche mexican tostada",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "menu_aguachile",
+      "page": "menu",
+      "section": "ceviches",
+      "category": "dish",
+      "label": "Aguachile de camarón",
+      "theme": "mexicano natural",
+      "query": "aguachile shrimp spicy green chile",
+      "priority": "low",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "menu_cerveza_fria",
+      "page": "menu",
+      "section": "cervezas",
+      "category": "product",
+      "label": "Cerveza bien fría",
+      "theme": "mexicano natural",
+      "query": "ice cold mexican beer bottle condensation droplets",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "menu_cerveza_barril",
+      "page": "menu",
+      "section": "cervezas",
+      "category": "product",
+      "label": "Cerveza de barril",
+      "theme": "mexicano natural",
+      "query": "draft beer pint glass bar tap",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "galeria_mariscos",
+      "page": "galeria",
+      "section": "galeria",
+      "category": "gallery",
+      "label": "Galería mariscos",
+      "theme": "mexicano natural",
+      "query": "seafood dishes spread overhead rustic table",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "galeria_ambiente",
+      "page": "galeria",
+      "section": "galeria",
+      "category": "gallery",
+      "label": "Galería ambiente y brindis",
+      "theme": "mexicano natural",
+      "query": "friends toasting cold beers seafood bar",
+      "priority": "low",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "lugar_terraza",
+      "page": "lugar",
+      "section": "lugar",
+      "category": "place",
+      "label": "Terraza del local",
+      "theme": "mexicano natural",
+      "query": "mexican beach seafood restaurant terrace seaside",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "lugar_interior",
+      "page": "lugar",
+      "section": "lugar",
+      "category": "place",
+      "label": "Interior del local",
+      "theme": "mexicano natural",
+      "query": "rustic mexican restaurant interior colorful decor",
+      "priority": "low",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "cta_fondo_pedido",
+      "page": "home",
+      "section": "pedido",
+      "category": "custom",
+      "label": "Fondo sección pedido WhatsApp",
+      "theme": "mexicano natural",
+      "query": "",
+      "priority": "low",
+      "source": "generic",
+      "fallback": "GR-AI"
+    }
+  ]
+}
