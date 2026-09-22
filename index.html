@@ -3,272 +3,368 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BEAR — Ceviches y Cervezas en Campeche</title>
-  <meta name="description" content="BEAR: venta de cervezas bien frías y ceviches para acompañar. Visítanos en Campeche.">
+  <title>BEAR · Ceviches y cervezas bien frías en Campeche</title>
+  <meta name="description" content="BEAR es tu local de ceviches frescos y cervezas bien frías en Campeche. Ceviche clásico, tostadas de mariscos, aguachile, tacos de pescado y micheladas para acompañar.">
+  <meta property="og:title" content="BEAR · Ceviches y cervezas bien frías">
+  <meta property="og:description" content="Ceviches frescos y cervezas bien frías para acompañar, en Campeche.">
+  <meta property="og:image" content="https://images.pexels.com/photos/38993745/pexels-photo-38993745.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#inicio" data-eb-editable="link" data-eb-key="index.a.1" data-eb-role="a" data-eb-kind="link">Saltar al contenido</a>
 
-  <header class="site-header" id="header">
+  <header class="site-header" id="top">
     <div class="container header-inner">
-      <a href="#hero" class="logo" data-eb-editable="link" data-eb-key="index.a.1" data-eb-role="a" data-eb-kind="link">BEAR</a>
-      <nav class="main-nav" id="mainNav">
-        <a href="#inicio" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">Inicio</a>
-        <a href="#menu" data-eb-editable="link" data-eb-key="index.a.3" data-eb-role="a" data-eb-kind="link">Menú</a>
-        <a href="#lugar" data-eb-editable="link" data-eb-key="index.a.4" data-eb-role="a" data-eb-kind="link">Lugar</a>
-        <a href="#galeria" data-eb-editable="link" data-eb-key="index.a.5" data-eb-role="a" data-eb-kind="link">Galería</a>
-        <a href="#opiniones" data-eb-editable="link" data-eb-key="index.a.6" data-eb-role="a" data-eb-kind="link">Opiniones</a>
-        <a href="#contacto" data-eb-editable="link" data-eb-key="index.a.7" data-eb-role="a" data-eb-kind="link">Contacto</a>
+      <a class="brand" href="#inicio" aria-label="BEAR, inicio" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span class="brand-text">
+          <strong>BEAR</strong>
+          <small>Ceviches · Cervezas frías</small>
+        </span>
+      </a>
+      <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio" data-eb-editable="link" data-eb-key="index.a.3" data-eb-role="a" data-eb-kind="link">Inicio</a></li>
+          <li><a href="#platos" data-eb-editable="link" data-eb-key="index.a.4" data-eb-role="a" data-eb-kind="link">Platos</a></li>
+          <li><a href="#bebidas" data-eb-editable="link" data-eb-key="index.a.5" data-eb-role="a" data-eb-kind="link">Bebidas</a></li>
+          <li><a href="#nosotros" data-eb-editable="link" data-eb-key="index.a.6" data-eb-role="a" data-eb-kind="link">Nosotros</a></li>
+          <li><a href="#visitanos" data-eb-editable="link" data-eb-key="index.a.7" data-eb-role="a" data-eb-kind="link">Visítanos</a></li>
+          <li><a href="#opiniones" class="nav-cta" data-eb-editable="link" data-eb-key="index.a.8" data-eb-role="a" data-eb-kind="link">Opiniones</a></li>
+        </ul>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" data-eb-editable="link" data-eb-key="index.button.8" data-eb-role="button" data-eb-kind="link">
-        <span></span><span></span><span></span>
+      <a class="header-phone" href="tel:9811332914" data-eb-editable="link" data-eb-key="index.a.9" data-eb-role="a" data-eb-kind="link">
+        <span aria-hidden="true">TEL</span>
+        981 133 2914
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" data-eb-editable="link" data-eb-key="index.button.10" data-eb-role="button" data-eb-kind="link">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="sr-only">Abrir menú</span>
       </button>
     </div>
   </header>
 
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="https://images.pexels.com/photos/14590691/pexels-photo-14590691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Interior cálido de restaurante de ceviches" loading="eager" data-eb-editable="image" data-eb-key="index.img.9" data-eb-role="img" data-eb-kind="image">
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <p class="hero-tagline" data-eb-editable="text" data-eb-key="index.p.10" data-eb-role="p" data-eb-kind="text">Ceviches frescos & Cervezas bien frías</p>
-      <h1 data-eb-editable="text" data-eb-key="index.h1.11" data-eb-role="h1" data-eb-kind="text">BEAR</h1>
-      <p class="hero-subtitle" data-eb-editable="text" data-eb-key="index.p.12" data-eb-role="p" data-eb-kind="text">Sabor que te hace volver</p>
-      <div class="hero-cta">
-        <a href="#menu" class="btn btn-primary" data-eb-editable="link" data-eb-key="index.a.13" data-eb-role="a" data-eb-kind="link">Ver Menú</a>
-        <a href="tel:9811332914" class="btn btn-secondary" data-eb-editable="link" data-eb-key="index.a.14" data-eb-role="a" data-eb-kind="link">Llamar Ahora</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="about" id="inicio">
-    <div class="container about-grid">
-      <div class="about-text">
-        <h2 data-eb-editable="text" data-eb-key="index.h2.15" data-eb-role="h2" data-eb-kind="text">Quiénes Somos</h2>
-        <p class="about-lead" data-eb-editable="text" data-eb-key="index.p.16" data-eb-role="p" data-eb-kind="text">Somos <strong>BEAR</strong>, un rincón campechano donde los ceviches se preparan con pescado fresco del día y las cervezas siempre llegan bien heladas.</p>
-        <p data-eb-editable="text" data-eb-key="index.p.17" data-eb-role="p" data-eb-kind="text">Creemos en lo sencillo: ingredientes frescos, preparación artesanal y un ambiente relajado donde puedes disfrutar con amigos o familia. Aquí no necesitas nada más que hambre y ganas de pasarla bien.</p>
-        <ul class="about-highlights">
-          <li>Ceviches preparados al momento</li>
-          <li>Cervezas seleccionadas y bien frías</li>
-          <li>Ambiente casual y acogedor</li>
-          <li>Ubicados en el corazón de Campeche</li>
-        </ul>
-      </div>
-      <div class="about-image">
-        <img src="https://images.pexels.com/photos/39035468/pexels-photo-39035468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Platos gourmet de mariscos en mesa de madera" loading="lazy" data-eb-editable="image" data-eb-key="index.img.18" data-eb-role="img" data-eb-kind="image">
-      </div>
-    </div>
-  </section>
-
-  <section class="menu" id="menu">
-    <div class="container">
-      <div class="section-header">
-        <h2 data-eb-editable="text" data-eb-key="index.h2.19" data-eb-role="h2" data-eb-kind="text">Nuestro Menú</h2>
-        <p class="section-desc" data-eb-editable="text" data-eb-key="index.p.20" data-eb-role="p" data-eb-kind="text">Ceviches frescos y cervezas artesanales para todos los gustos</p>
-      </div>
-      <div class="menu-category">
-        <h3 class="menu-cat-title" data-eb-editable="text" data-eb-key="index.h3.21" data-eb-role="h3" data-eb-kind="text">Ceviches</h3>
-        <div class="menu-grid">
-          <div class="menu-card">
-            <div class="menu-card-img">
-              <img src="https://images.pexels.com/photos/28525144/pexels-photo-28525144.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Ceviche de pescado con limón y cilantro" loading="lazy" data-eb-editable="image" data-eb-key="index.img.22" data-eb-role="img" data-eb-kind="image">
-            </div>
-            <div class="menu-card-body">
-              <h4 data-eb-editable="text" data-eb-key="index.h4.23" data-eb-role="h4" data-eb-kind="text">Ceviche de Pescado</h4>
-              <p class="menu-desc" data-eb-editable="text" data-eb-key="index.p.24" data-eb-role="p" data-eb-kind="text">Pescado fresco marinado en limón, cebolla, cilantro y chile. Nuestro plato estrella.</p>
-              <span class="menu-price">$85 MXN</span>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-card-img">
-              <img src="https://images.pexels.com/photos/19725440/pexels-photo-19725440.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Tostada de ceviche de camarón con aguacate" loading="lazy" data-eb-editable="image" data-eb-key="index.img.25" data-eb-role="img" data-eb-kind="image">
-            </div>
-            <div class="menu-card-body">
-              <h4 data-eb-editable="text" data-eb-key="index.h4.26" data-eb-role="h4" data-eb-kind="text">Ceviche de Camarón</h4>
-              <p class="menu-desc" data-eb-editable="text" data-eb-key="index.p.27" data-eb-role="p" data-eb-kind="text">Camarón fresco sobre tostada crocante con aguacate y salsa de habanero.</p>
-              <span class="menu-price">$95 MXN</span>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-card-img">
-              <img src="https://images.pexels.com/photos/4801427/pexels-photo-4801427.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Ceviche de pulpo presentación gourmet" loading="lazy" data-eb-editable="image" data-eb-key="index.img.28" data-eb-role="img" data-eb-kind="image">
-            </div>
-            <div class="menu-card-body">
-              <h4 data-eb-editable="text" data-eb-key="index.h4.29" data-eb-role="h4" data-eb-kind="text">Ceviche de Pulpo</h4>
-              <p class="menu-desc" data-eb-editable="text" data-eb-key="index.p.30" data-eb-role="p" data-eb-kind="text">Pulpo tierno con cítricos, aceite de oliva y un toque de chile chipotle ahumado.</p>
-              <span class="menu-price">$110 MXN</span>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-card-img">
-              <img src="https://images.pexels.com/photos/38993745/pexels-photo-38993745.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Ceviche mixto para compartir" loading="lazy" data-eb-editable="image" data-eb-key="index.img.31" data-eb-role="img" data-eb-kind="image">
-            </div>
-            <div class="menu-card-body">
-              <h4 data-eb-editable="text" data-eb-key="index.h4.32" data-eb-role="h4" data-eb-kind="text">Ceviche Mixto</h4>
-              <p class="menu-desc" data-eb-editable="text" data-eb-key="index.p.33" data-eb-role="p" data-eb-kind="text">Pescado, camarón y pulpo en una mezcla perfecta. Ideal para compartir.</p>
-              <span class="menu-price">$125 MXN</span>
-            </div>
-          </div>
+  <main id="inicio">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-media" style="background-image:url('https://images.pexels.com/photos/38993745/pexels-photo-38993745.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')" role="img" aria-label="Ceviche mexicano con camarón, limón y totopos"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="hero-eyebrow" data-eb-editable="text" data-eb-key="index.p.11" data-eb-role="p" data-eb-kind="text">Campeche · Mariscos frescos</p>
+        <h1 class="hero-title" data-eb-editable="text" data-eb-key="index.h1.12" data-eb-role="h1" data-eb-kind="text">BEAR</h1>
+        <p class="hero-sub" data-eb-editable="text" data-eb-key="index.p.13" data-eb-role="p" data-eb-kind="text">
+          Ceviches bien hechos y cervezas <em>bien frías</em> para acompañar.
+          Ven, prueba el local y quédate un rato más.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#platos" data-eb-editable="link" data-eb-key="index.a.14" data-eb-role="a" data-eb-kind="link">Ver el menú</a>
+          <a class="btn btn-ghost" href="#visitanos" data-eb-editable="link" data-eb-key="index.a.15" data-eb-role="a" data-eb-kind="link">¿Dónde estamos?</a>
         </div>
       </div>
-      <div class="menu-category">
-        <h3 class="menu-cat-title" data-eb-editable="text" data-eb-key="index.h3.34" data-eb-role="h3" data-eb-kind="text">Bebidas</h3>
-        <div class="menu-grid menu-grid-2">
-          <div class="menu-card">
-            <div class="menu-card-img">
-              <img src="https://images.pexels.com/photos/7421851/pexels-photo-7421851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Cerveza bien fría con escarcha" loading="lazy" data-eb-editable="image" data-eb-key="index.img.35" data-eb-role="img" data-eb-kind="image">
-            </div>
-            <div class="menu-card-body">
-              <h4 data-eb-editable="text" data-eb-key="index.h4.36" data-eb-role="h4" data-eb-kind="text">Cerveza Artesanal</h4>
-              <p class="menu-desc" data-eb-editable="text" data-eb-key="index.p.37" data-eb-role="p" data-eb-kind="text">Seleccion de cervezas locales y nacionales, servidas a la temperatura perfecta.</p>
-              <span class="menu-price">$45 MXN</span>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-card-img">
-              <img src="https://images.pexels.com/photos/15750739/pexels-photo-15750739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Par de cerveza y ceviche" loading="lazy" data-eb-editable="image" data-eb-key="index.img.38" data-eb-role="img" data-eb-kind="image">
-            </div>
-            <div class="menu-card-body">
-              <h4 data-eb-editable="text" data-eb-key="index.h4.39" data-eb-role="h4" data-eb-kind="text">Combo Cerveza + Ceviche</h4>
-              <p class="menu-desc" data-eb-editable="text" data-eb-key="index.p.40" data-eb-role="p" data-eb-kind="text">Tu cerveza favorita acompañada de un ceviche a elección. La combinación ideal.</p>
-              <span class="menu-price">$120 MXN</span>
-            </div>
-          </div>
-        </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Desliza</span>
+        <span class="hero-scroll-line"></span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="place" id="lugar">
-    <div class="container place-grid">
-      <div class="place-image place-image-ext">
-        <img src="https://images.pexels.com/photos/32204734/pexels-photo-32204734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Fachada colorida del restaurante en Campeche" loading="lazy" data-eb-editable="image" data-eb-key="index.img.41" data-eb-role="img" data-eb-kind="image">
-        <div class="place-label">Nuestro local</div>
-      </div>
-      <div class="place-image place-image-int">
-        <img src="https://images.pexels.com/photos/33454120/pexels-photo-33454120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Interior acogedor con decoración de madera" loading="lazy" data-eb-editable="image" data-eb-key="index.img.42" data-eb-role="img" data-eb-kind="image">
-        <div class="place-label">Zona de comedor</div>
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Ceviches frescos</span><b></b>
+        <span>Cervezas bien frías</span><b></b>
+        <span>Aguachile</span><b></b>
+        <span>Micheladas</span><b></b>
+        <span>Tostadas de mariscos</span><b></b>
+        <span>Tacos de pescado</span><b></b>
+        <span>Camarones</span><b></b>
+        <span>Pescado a la parrilla</span><b></b>
+        <span>Ceviches frescos</span><b></b>
+        <span>Cervezas bien frías</span><b></b>
+        <span>Aguachile</span><b></b>
+        <span>Micheladas</span><b></b>
+        <span>Tostadas de mariscos</span><b></b>
+        <span>Tacos de pescado</span><b></b>
+        <span>Camarones</span><b></b>
+        <span>Pescado a la parrilla</span><b></b>
       </div>
     </div>
-    <div class="place-info">
+
+    <!-- PLATOS -->
+    <section class="section section-tinted" id="platos" data-reveal> 
       <div class="container">
-        <h2 data-eb-editable="text" data-eb-key="index.h2.43" data-eb-role="h2" data-eb-kind="text">Visítanos</h2>
-        <div class="place-details">
-          <div class="place-detail">
-            <span class="detail-icon">Ubicación</span>
-            <p data-eb-editable="text" data-eb-key="index.p.44" data-eb-role="p" data-eb-kind="text">Campeche, México</p>
-            <a href="https://maps.google.com/?q=Monterrey" target="_blank" rel="noopener" class="btn btn-outline" data-eb-editable="link" data-eb-key="index.a.45" data-eb-role="a" data-eb-kind="link">Ver en Mapa</a>
-          </div>
-          <div class="place-detail">
-            <span class="detail-icon">Horario</span>
-            <p data-eb-editable="text" data-eb-key="index.p.46" data-eb-role="p" data-eb-kind="text">Lun a Vie: 7:00 – 21:00</p>
-            <p data-eb-editable="text" data-eb-key="index.p.47" data-eb-role="p" data-eb-kind="text">Sáb: 8:00 – 22:00</p>
-            <p data-eb-editable="text" data-eb-key="index.p.48" data-eb-role="p" data-eb-kind="text">Dom: 9:00 – 15:00</p>
-          </div>
-          <div class="place-detail">
-            <span class="detail-icon">Contacto</span>
-            <p data-eb-editable="text" data-eb-key="index.p.49" data-eb-role="p" data-eb-kind="text">Tel: 981 133 2914</p>
-            <a href="tel:9811332914" class="btn btn-outline" data-eb-editable="link" data-eb-key="index.a.50" data-eb-role="a" data-eb-kind="link">Llamar</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <header class="section-head">
+          <p class="section-kicker" data-eb-editable="text" data-eb-key="index.p.16" data-eb-role="p" data-eb-kind="text">Algo para morder</p>
+          <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.17" data-eb-role="h2" data-eb-kind="text">Ceviches y mariscos del día</h2>
+          <p class="section-intro" data-eb-editable="text" data-eb-key="index.p.18" data-eb-role="p" data-eb-kind="text">
+            Camarón fresco, limón, chile y todo lo que da el mar de Campeche,
+            servido para que lo acompañes con tu cerveza bien fría.
+          </p>
+        </header>
 
-  <section class="gallery" id="galeria">
-    <div class="container">
-      <div class="section-header">
-        <h2 data-eb-editable="text" data-eb-key="index.h2.51" data-eb-role="h2" data-eb-kind="text">Nuestra Galería</h2>
-        <p class="section-desc" data-eb-editable="text" data-eb-key="index.p.52" data-eb-role="p" data-eb-kind="text">Un vistazo a lo que te espera en BEAR</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item gallery-item-wide">
-          <img src="https://images.pexels.com/photos/3975044/pexels-photo-3975044.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Ceviche servido en plato blanco con garnachas frescas" loading="lazy" data-eb-editable="image" data-eb-key="index.img.53" data-eb-role="img" data-eb-kind="image">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/23371786/pexels-photo-23371786.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Terraza con mesa llena de platillos mexicanos" loading="lazy" data-eb-editable="image" data-eb-key="index.img.54" data-eb-role="img" data-eb-kind="image">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/38993745/pexels-photo-38993745.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Ceviche de mariscos con chips de maíz" loading="lazy" data-eb-editable="image" data-eb-key="index.img.55" data-eb-role="img" data-eb-kind="image">
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="dish-grid">
+          <article class="dish-card" data-reveal>
+            <div class="dish-media">
+              <img src="https://images.pexels.com/photos/4801427/pexels-photo-4801427.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Plato de mariscos con camarón, pulpo y salsa picante" loading="lazy" width="940" height="650" data-eb-editable="image" data-eb-key="index.img.19" data-eb-role="img" data-eb-kind="image">
+              <span class="dish-tag">El favorito</span>
+            </div>
+            <div class="dish-body">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.20" data-eb-role="h3" data-eb-kind="text">Ceviche clásico</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.21" data-eb-role="p" data-eb-kind="text">Camarón y pescado frescos con limón, jitomate, cebolla morada y cilantro, con totopos para mojar.</p>
+              <span class="dish-note">Fresco del día · Pregunta por el precio</span>
+            </div>
+          </article>
 
-  <section class="opiniones" id="opiniones">
-    <div class="opiniones-shell" data-itm-comments-shell>
+          <article class="dish-card" data-reveal>
+            <div class="dish-media">
+              <img src="https://images.pexels.com/photos/19725440/pexels-photo-19725440.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Tostadas de mariscos con aguacate" loading="lazy" width="940" height="650" data-eb-editable="image" data-eb-key="index.img.22" data-eb-role="img" data-eb-kind="image">
+              <span class="dish-tag">Crocante</span>
+            </div>
+            <div class="dish-body">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.23" data-eb-role="h3" data-eb-kind="text">Tostadas de mariscos</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.24" data-eb-role="p" data-eb-kind="text">Base crocante con mariscos frescos, aguacate, chile y un toque de limón. Ideal para empezar la tarde.</p>
+              <span class="dish-note">Con aguacate fresco</span>
+            </div>
+          </article>
+
+          <article class="dish-card" data-reveal>
+            <div class="dish-media">
+              <img src="https://images.pexels.com/photos/19725433/pexels-photo-19725433.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Aguachile de camarón con aguacate y cebolla" loading="lazy" width="940" height="650" data-eb-editable="image" data-eb-key="index.img.25" data-eb-role="img" data-eb-kind="image">
+              <span class="dish-tag">Picosito</span>
+            </div>
+            <div class="dish-body">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.26" data-eb-role="h3" data-eb-kind="text">Aguachile</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.27" data-eb-role="p" data-eb-kind="text">Camarón crudo maridado en chile y limón, con aguacate, cebolla y pepino. Fresco con un golpe de picante.</p>
+              <span class="dish-note">Se prepara al momento</span>
+            </div>
+          </article>
+
+          <article class="dish-card" data-reveal>
+            <div class="dish-media">
+              <img src="https://images.pexels.com/photos/13201061/pexels-photo-13201061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Tacos de pescado estilo callejero" loading="lazy" width="940" height="650" data-eb-editable="image" data-eb-key="index.img.28" data-eb-role="img" data-eb-kind="image">
+              <span class="dish-tag">Para llevar o comer aquí</span>
+            </div>
+            <div class="dish-body">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.29" data-eb-role="h3" data-eb-kind="text">Tacos de pescado</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.30" data-eb-role="p" data-eb-kind="text">Tortilla caliente con pescado fresco, col, crema y salsa. De la calle a tu mesa, como debe ser.</p>
+              <span class="dish-note">Con salsa de la casa</span>
+            </div>
+          </article>
+
+          <article class="dish-card" data-reveal>
+            <div class="dish-media">
+              <img src="https://images.pexels.com/photos/28446446/pexels-photo-28446446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Pescado a la parrilla con jitomate y perejil" loading="lazy" width="940" height="650" data-eb-editable="image" data-eb-key="index.img.31" data-eb-role="img" data-eb-kind="image">
+              <span class="dish-tag">A la leña</span>
+            </div>
+            <div class="dish-body">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.32" data-eb-role="h3" data-eb-kind="text">Pescado a la parrilla</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.33" data-eb-role="p" data-eb-kind="text">Pescado entero a la parrilla con jitomate, ajo y perejil. Para compartir, con cerveza fría de lado.</p>
+              <span class="dish-note">Perfecto para compartir</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-cta" data-reveal>
+          <a class="btn btn-primary" href="#visitanos" data-eb-editable="link" data-eb-key="index.a.34" data-eb-role="a" data-eb-kind="link">Anímate a visitarnos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEBIDAS -->
+    <section class="section" id="bebidas" data-reveal>
       <div class="container">
-        <div class="section-header">
-          <h2 data-eb-editable="text" data-eb-key="index.h2.56" data-eb-role="h2" data-eb-kind="text">Opiniones de Nuestros Visitantes</h2>
-          <p class="section-desc" data-eb-editable="text" data-eb-key="index.p.57" data-eb-role="p" data-eb-kind="text">Comparte tu experiencia con BEAR. Inicia sesión con Google, guarda tu nombre, deja tu calificación con estrellas y publica tu comentario.</p>
+        <header class="section-head">
+          <p class="section-kicker" data-eb-editable="text" data-eb-key="index.p.35" data-eb-role="p" data-eb-kind="text">Para el calor de Campeche</p>
+          <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.36" data-eb-role="h2" data-eb-kind="text">Cervezas bien frías</h2>
+          <p class="section-intro" data-eb-editable="text" data-eb-key="index.p.37" data-eb-role="p" data-eb-kind="text">
+            Que el ceviche no venga solo: hielo, caguama bien fría y michelada
+            para cerrar el día como debe ser.
+          </p>
+        </header>
+
+        <div class="drink-layout">
+          <article class="drink-card drink-card-wide" data-reveal>
+            <div class="drink-media">
+              <img src="https://images.pexels.com/photos/13324889/pexels-photo-13324889.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Cervezas frías en cubeta con hielo" loading="lazy" width="940" height="650" data-eb-editable="image" data-eb-key="index.img.38" data-eb-role="img" data-eb-kind="image">
+            </div>
+            <div class="drink-body">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.39" data-eb-role="h3" data-eb-kind="text">Cervezas bien frías</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.40" data-eb-role="p" data-eb-kind="text">Nacionales y bien heladas, listas para servirse con tu plato de mariscos.</p>
+              <span class="dish-note">Siempre frías de bodega</span>
+            </div>
+          </article>
+
+          <article class="drink-card" data-reveal>
+            <div class="drink-media">
+              <img src="https://images.pexels.com/photos/36027855/pexels-photo-36027855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Michelada con limón y escarcha de sal" loading="lazy" width="940" height="650" data-eb-editable="image" data-eb-key="index.img.41" data-eb-role="img" data-eb-kind="image">
+            </div>
+            <div class="drink-body">
+              <h3 data-eb-editable="text" data-eb-key="index.h3.42" data-eb-role="h3" data-eb-kind="text">Michelada</h3>
+              <p data-eb-editable="text" data-eb-key="index.p.43" data-eb-role="p" data-eb-kind="text">Con escarcha de sal y limón, clásica o picosita. La que manda en el calor.</p>
+              <span class="dish-note">Sabor clásico o clamato</span>
+            </div>
+          </article>
         </div>
-        <div class="opiniones-explain">
-          <div class="opiniones-card">
-            <div class="opiniones-step">
-              <span class="step-num">1</span>
-              <h4 data-eb-editable="text" data-eb-key="index.h4.58" data-eb-role="h4" data-eb-kind="text">Inicia Sesión</h4>
-              <p data-eb-editable="text" data-eb-key="index.p.59" data-eb-role="p" data-eb-kind="text">Usa tu cuenta de Google para acceder de forma rápida y segura.</p>
-            </div>
-            <div class="opiniones-step">
-              <span class="step-num">2</span>
-              <h4 data-eb-editable="text" data-eb-key="index.h4.60" data-eb-role="h4" data-eb-kind="text">Guarda tu Perfil</h4>
-              <p data-eb-editable="text" data-eb-key="index.p.61" data-eb-role="p" data-eb-kind="text">Agrega tu nombre (será público) y tu teléfono (opcional, nunca se muestra).</p>
-            </div>
-            <div class="opiniones-step">
-              <span class="step-num">3</span>
-              <h4 data-eb-editable="text" data-eb-key="index.h4.62" data-eb-role="h4" data-eb-kind="text">Califica y Comenta</h4>
-              <p data-eb-editable="text" data-eb-key="index.p.63" data-eb-role="p" data-eb-kind="text">Selecciona de 1 a 5 estrellas y cuéntanos cómo fue tu experiencia.</p>
-            </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="section section-tinted" id="nosotros" data-reveal>
+      <div class="container about-layout">
+        <figure class="about-media" data-reveal>
+          <img src="https://images.pexels.com/photos/39035466/pexels-photo-39035466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Mariscos a la parrilla servidos sobre lechuga fresca" loading="lazy" width="940" height="650" data-eb-editable="image" data-eb-key="index.img.44" data-eb-role="img" data-eb-kind="image">
+          <figcaption>Todo fresco y al momento</figcaption>
+        </figure>
+        <div class="about-body" data-reveal>
+          <p class="section-kicker" data-eb-editable="text" data-eb-key="index.p.45" data-eb-role="p" data-eb-kind="text">¿Quiénes somos?</p>
+          <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.46" data-eb-role="h2" data-eb-kind="text">Un local de barrio con mar de por medio</h2>
+          <p data-eb-editable="text" data-eb-key="index.p.47" data-eb-role="p" data-eb-kind="text">
+            Somos <strong>BEAR</strong>, un local de Campeche que vive del mar y
+            del hielo: vendemos <strong>ceviches frescos</strong> y
+            <strong>cervezas bien frías</strong> para acompañar.
+          </p>
+          <p data-eb-editable="text" data-eb-key="index.p.48" data-eb-role="p" data-eb-kind="text">
+            Estamos aquí para que pruebes, te quedes y vuelvas. Así de simple:
+            buen camarón, buen chile y la cerveza en su punto.
+          </p>
+          <ul class="feature-list">
+            <li>Mariscos frescos del día</li>
+            <li>Cervezas siempre heladas</li>
+            <li>Atención del barrio</li>
+          </ul>
+          <a class="btn btn-primary" href="tel:9811332914" data-eb-editable="link" data-eb-key="index.a.49" data-eb-role="a" data-eb-kind="link">Llámanos: 981 133 2914</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section" id="galeria" data-reveal>
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker" data-eb-editable="text" data-eb-key="index.p.50" data-eb-role="p" data-eb-kind="text">Así se ve el local</p>
+          <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.51" data-eb-role="h2" data-eb-kind="text">De lo que llegas a cenar</h2>
+        </header>
+        <div class="gallery-grid">
+          <figure class="gallery-item" data-reveal>
+            <button type="button" class="gallery-open" data-full="https://images.pexels.com/photos/31495669/pexels-photo-31495669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" aria-label="Ampliar imagen: ceviche con maíz y decoración" data-eb-editable="link" data-eb-key="index.button.52" data-eb-role="button" data-eb-kind="link">
+              <img src="https://images.pexels.com/photos/31495669/pexels-photo-31495669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Ceviche decorado con maíz y hierbas" loading="lazy" width="940" height="650" data-eb-editable="image" data-eb-key="index.img.53" data-eb-role="img" data-eb-kind="image">
+              <figcaption>Presentación de platos</figcaption>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal>
+            <button type="button" class="gallery-open" data-full="https://images.pexels.com/photos/8352783/pexels-photo-8352783.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" aria-label="Ampliar imagen: mariscos frescos sobre hielo" data-eb-editable="link" data-eb-key="index.button.54" data-eb-role="button" data-eb-kind="link">
+              <img src="https://images.pexels.com/photos/8352783/pexels-photo-8352783.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Almejas y mariscos frescos sobre hielo" loading="lazy" width="940" height="650" data-eb-editable="image" data-eb-key="index.img.55" data-eb-role="img" data-eb-kind="image">
+              <figcaption>Mariscos frescos</figcaption>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal>
+            <button type="button" class="gallery-open" data-full="https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" aria-label="Ampliar imagen: bebidas tropicales en la barra" data-eb-editable="link" data-eb-key="index.button.56" data-eb-role="button" data-eb-kind="link">
+              <img src="https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Cócteles coloridos en mesa rústica" loading="lazy" width="940" height="650" data-eb-editable="image" data-eb-key="index.img.57" data-eb-role="img" data-eb-kind="image">
+              <figcaption>Barra de bebidas</figcaption>
+            </button>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISÍTANOS -->
+    <section class="section section-dark" id="visitanos" data-reveal>
+      <div class="container visit-layout">
+        <div class="visit-media" style="background-image:url('https://images.pexels.com/photos/5029891/pexels-photo-5029891.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')" role="img" aria-label="Terraza de restaurante junto al mar con luces cálidas por la tarde"></div>
+        <div class="visit-body">
+          <p class="section-kicker" data-eb-editable="text" data-eb-key="index.p.58" data-eb-role="p" data-eb-kind="text">Ven al local</p>
+          <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.59" data-eb-role="h2" data-eb-kind="text">Campeche te espera</h2>
+          <p data-eb-editable="text" data-eb-key="index.p.60" data-eb-role="p" data-eb-kind="text">
+            Pásate a conocer el lugar y quédate a cenar. Lo que ves en la página
+            es lo que hay: mariscos frescos y cerveza bien fría.
+          </p>
+          <ul class="visit-list">
+            <li>
+              <span class="visit-ico" aria-hidden="true">DÓ</span>
+              <div>
+                <strong>Dónde</strong>
+                <span>Campeche · <a href="https://maps.google.com/?q=Monterrey" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.61" data-eb-role="a" data-eb-kind="link">Ver en el mapa</a></span>
+              </div>
+            </li>
+            <li>
+              <span class="visit-ico" aria-hidden="true">TEL</span>
+              <div>
+                <strong>Teléfono</strong>
+                <a href="tel:9811332914" data-eb-editable="link" data-eb-key="index.a.62" data-eb-role="a" data-eb-kind="link">981 133 2914</a>
+              </div>
+            </li>
+            <li>
+              <span class="visit-ico" aria-hidden="true">HR</span>
+              <div>
+                <strong>Horario</strong>
+                <span>Lun – Vie 7:00 a 21:00 · Sáb 8:00 a 22:00 · Dom 9:00 a 15:00</span>
+              </div>
+            </li>
+          </ul>
+          <div class="visit-actions">
+            <a class="btn btn-primary" href="tel:9811332914" data-eb-editable="link" data-eb-key="index.a.63" data-eb-role="a" data-eb-kind="link">Reserva tu mesa</a>
+            <a class="btn btn-ghost" href="https://maps.google.com/?q=Monterrey" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.64" data-eb-role="a" data-eb-kind="link">Cómo llegar</a>
           </div>
         </div>
-        <div class="opiniones-widget" data-itm-comments data-project-id="ee6573b9-d5de-47e8-b614-796d31124119"></div>
-        <div class="opiniones-profile" data-itm-profile data-project-id="ee6573b9-d5de-47e8-b614-796d31124119"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="cta" id="contacto">
-    <div class="cta-bg">
-      <img src="https://itm-void-excepcional.pages.dev/media-fallback/imagen-generica.jpg" alt="" loading="lazy" aria-hidden="true" data-eb-editable="image" data-eb-key="index.img.64" data-eb-role="img" data-eb-kind="image">
-    </div>
-    <div class="cta-overlay"></div>
-    <div class="container cta-content">
-      <h2 data-eb-editable="text" data-eb-key="index.h2.65" data-eb-role="h2" data-eb-kind="text">¿Se te antojó?</h2>
-      <p data-eb-editable="text" data-eb-key="index.p.66" data-eb-role="p" data-eb-kind="text">Ven a BEAR y disfruta de ceviches frescos y cervezas bien frías. Te esperamos con los brazos abiertos.</p>
-      <div class="cta-actions">
-        <a href="tel:9811332914" class="btn btn-primary btn-lg" data-eb-editable="link" data-eb-key="index.a.67" data-eb-role="a" data-eb-kind="link">Llamar Ahora</a>
-        <a href="https://maps.google.com/?q=Monterrey" target="_blank" rel="noopener" class="btn btn-secondary btn-lg" data-eb-editable="link" data-eb-key="index.a.68" data-eb-role="a" data-eb-kind="link">Cómo Llegar</a>
+    <!-- OPINIONES -->
+    <section class="section" id="opiniones" data-reveal>
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker" data-eb-editable="text" data-eb-key="index.p.65" data-eb-role="p" data-eb-kind="text">La gente opina</p>
+          <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.66" data-eb-role="h2" data-eb-kind="text">Opiniones y comentarios</h2>
+          <p class="section-intro" data-eb-editable="text" data-eb-key="index.p.67" data-eb-role="p" data-eb-kind="text">
+            Cuéntanos qué tal estuvo tu ceviche y tu cerveza. Inicia sesión con tu
+            cuenta de Google, guarda tu nombre y un teléfono opcional (privado, no
+            se muestra), califica con estrellas y deja tu comentario. Tus reseñas
+            pasan por moderación antes de publicarse y otros visitantes solo verán
+            tu nombre, nunca tu teléfono.
+          </p>
+        </header>
+
+        <div class="comments-shell" data-itm-comments-shell>
+          <div class="comments-panel">
+            <div data-itm-profile data-project-id="ee6573b9-d5de-47e8-b614-796d31124119"></div>
+            <div data-itm-comments data-project-id="ee6573b9-d5de-47e8-b614-796d31124119"></div>
+          </div>
+          <p class="comments-note" data-eb-editable="text" data-eb-key="index.p.68" data-eb-role="p" data-eb-kind="text">
+            Tu teléfono es opcional y siempre privado. Solo se publica tu nombre.
+          </p>
+        </div>
       </div>
-      <p class="cta-phone" data-eb-editable="text" data-eb-key="index.p.69" data-eb-role="p" data-eb-kind="text">981 133 2914</p>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="footer-logo">BEAR</span>
-        <p data-eb-editable="text" data-eb-key="index.p.70" data-eb-role="p" data-eb-kind="text">Ceviches y cervezas en Campeche</p>
-      </div>
-      <div class="footer-links">
-        <a href="#inicio" data-eb-editable="link" data-eb-key="index.a.71" data-eb-role="a" data-eb-kind="link">Inicio</a>
-        <a href="#menu" data-eb-editable="link" data-eb-key="index.a.72" data-eb-role="a" data-eb-kind="link">Menú</a>
-        <a href="#lugar" data-eb-editable="link" data-eb-key="index.a.73" data-eb-role="a" data-eb-kind="link">Lugar</a>
-        <a href="#opiniones" data-eb-editable="link" data-eb-key="index.a.74" data-eb-role="a" data-eb-kind="link">Opiniones</a>
-      </div>
-      <div class="footer-contact">
-        <p data-eb-editable="text" data-eb-key="index.p.75" data-eb-role="p" data-eb-kind="text">981 133 2914</p>
-        <p data-eb-editable="text" data-eb-key="index.p.76" data-eb-role="p" data-eb-kind="text">Campeche, México</p>
-      </div>
-    </div>
-    <div class="footer-copy">
-      <div class="container">
-        <p data-eb-editable="text" data-eb-key="index.p.77" data-eb-role="p" data-eb-kind="text">&copy; 2026 BEAR. Todos los derechos reservados.</p>
-      </div>
+      <p class="footer-brand" data-eb-editable="text" data-eb-key="index.p.69" data-eb-role="p" data-eb-kind="text">BEAR <span>· Campeche</span></p>
+      <p data-eb-editable="text" data-eb-key="index.p.70" data-eb-role="p" data-eb-kind="text">Ceviches frescos y cervezas bien frías.</p>
+      <p class="footer-contact" data-eb-editable="text" data-eb-key="index.p.71" data-eb-role="p" data-eb-kind="text">
+        <a href="tel:9811332914" data-eb-editable="link" data-eb-key="index.a.72" data-eb-role="a" data-eb-kind="link">981 133 2914</a>
+        <span>·</span>
+        <a href="https://maps.google.com/?q=Monterrey" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.73" data-eb-role="a" data-eb-kind="link">Cómo llegar</a>
+      </p>
+      <p class="footer-copy" data-eb-editable="text" data-eb-key="index.p.74" data-eb-role="p" data-eb-kind="text">© <span id="year">2026</span> BEAR. Hecho con mar, limón y hielo.</p>
     </div>
   </footer>
 
-  <script src="https://itm-void-excepcional.pages.dev/comments.js" defer></script>
-  <script src="script.js" defer></script>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Cerrar" data-eb-editable="link" data-eb-key="index.button.75" data-eb-role="button" data-eb-kind="link">×</button>
+    <figure>
+      <img src="" alt="Imagen ampliada de BEAR" data-eb-editable="image" data-eb-key="index.img.76" data-eb-role="img" data-eb-kind="image">
+      <figcaption></figcaption>
+    </figure>
+  </div>
+
+  <!-- Contrato ITM de comentarios -->
+  <script src="https://itm-void-excepcional.pages.dev/comments.js" async defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
